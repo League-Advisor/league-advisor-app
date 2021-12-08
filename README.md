@@ -20,19 +20,23 @@
 
 ## User Stories
 
-### *TBA*
+[User Stories](https://github.com/orgs/League-Advisor/projects/2)
 
 ---
 
 ## Wireframes
+![log](https://cdn.discordapp.com/attachments/904441571544559617/918250646086484058/LA_log_in_.jpg)
+![sign](https://cdn.discordapp.com/attachments/904441571544559617/918250646338175026/LA_sign_up.jpg)
+![Dashboard](https://cdn.discordapp.com/attachments/904441571544559617/918250645876797490/LA_dashB.jpg)
+![Browser](https://cdn.discordapp.com/attachments/904441571544559617/918251768738086932/LA_championB.jpg)
+![SoloRanked](https://cdn.discordapp.com/attachments/904441571544559617/918250645352513556/LA__item_And_champion_.jpg)
 
-### *TBA*
 
 ---
 
-## Domain Model
+## Domain Model And Database Schema
 
-### *TBA*
+![Domain](https://cdn.discordapp.com/attachments/905518241651228712/918253198144319548/Domain_Model.png)
 
 ---
 
