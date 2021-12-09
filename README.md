@@ -25,8 +25,8 @@
 ---
 
 ## Wireframes
-![log](https://cdn.discordapp.com/attachments/904441571544559617/918250646086484058/LA_log_in_.jpg)
-![sign](https://cdn.discordapp.com/attachments/904441571544559617/918250646338175026/LA_sign_up.jpg)
+![log-in](https://cdn.discordapp.com/attachments/904441571544559617/918250646086484058/LA_log_in_.jpg)
+![sign-up](https://cdn.discordapp.com/attachments/904441571544559617/918250646338175026/LA_sign_up.jpg)
 ![Dashboard](https://cdn.discordapp.com/attachments/904441571544559617/918250645876797490/LA_dashB.jpg)
 ![Browser](https://cdn.discordapp.com/attachments/904441571544559617/918251768738086932/LA_championB.jpg)
 ![SoloRanked](https://cdn.discordapp.com/attachments/904441571544559617/918250645352513556/LA__item_And_champion_.jpg)
@@ -34,9 +34,18 @@
 
 ---
 
-## Domain Model And Database Schema
+## Domain Model
 
-![Domain](https://cdn.discordapp.com/attachments/905518241651228712/918253198144319548/Domain_Model.png)
+![Domain Model](assets/Domain_Model.png)
+
+- Items marked with * are stretch goals or may require different approach.
+
+---
+## Database Schema Diagram
+
+![Database Schema](assets/Database_Schema.png)
+
+- Items marked with * are stretch goals or may require different approach.
 
 ---
 
@@ -61,6 +70,8 @@
 ## Change Log
 
 v0.1: _feat: started project and created project repo_ - 08 Dec 2021
+
+v0.1.1 _docs: added requirements, domain model and db schema_ - 09 Dec 2021
 
 ---
 
