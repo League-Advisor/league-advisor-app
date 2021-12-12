@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
 
       <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
-        <LoginForm login={login} />
+        {user? <>HELLO!</> : <LoginForm login={login} />}
       </main>
 
       <footer className="flex items-center justify-center w-full h-24 border-t">

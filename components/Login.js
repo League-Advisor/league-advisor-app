@@ -1,12 +1,13 @@
 import Link from "next/link";
-// import Image from "next/image";
+import Image from "next/image";
 
 
 export default function LoginForm({login}) {
 
     return (
         <div className="flex w-3/4 bg-gray-300 rounded ">
-            <div className="flex w-1/2 py-10 ">
+            <div className="flex w-1/2 py-10 bg-fixed" >
+                <Image></Image>
                 <form className="w-full" onSubmit = {(event) => {event.preventDefault(), login(event.target.userName.value, event.target.password.value)}}>
                     <div className="justify-start w-1/3 text-xl font-bold ">
                         <h2 className="justify-start text-3xl font-bold">Login</h2>
@@ -33,7 +34,7 @@ export default function LoginForm({login}) {
                             </div>
 
                         <div className="px-10 py-10">
-                            <input className="block w-full px-4 py-4 text-xl font-bold leading-tight text-gray-700 transition bg-gray-400 rounded hover:bg-gray-500" id="userName" type="submit" placeholder="username" required />
+                            <input className="block w-full px-4 py-4 text-xl font-bold leading-tight text-gray-700 transition bg-gray-400 rounded hover:bg-gray-500" type="submit" required />
                         </div>    
                     </div>
                 </form >
