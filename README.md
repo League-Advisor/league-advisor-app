@@ -64,7 +64,11 @@
 - react
 - javascript
 - tailwind
-
+- @headlessui/react
+- @heroicons/react
+- swr
+- axios
+- jsonwebtoken
 ---
 
 ## Getting Started
@@ -81,6 +85,7 @@ v0.1.1 _docs: added requirements, domain model and db schema_ - 09 Dec 2021
 
 v0.2.0: _feat: added next app_ - 12 Dec 2021 
 
+v0.2.2: _feat: create dashboard component_ - 12 Dec 2021 
 ---
 
 ## Test Coverage
