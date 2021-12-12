@@ -59,6 +59,12 @@
 
 [GitHub Projects - League Advisor Web App](https://github.com/orgs/League-Advisor/projects/2)
 
+- yarn
+- next 
+- react
+- javascript
+- tailwind
+
 ---
 
 ## Getting Started
@@ -72,6 +78,8 @@
 v0.1: _feat: started project and created project repo_ - 08 Dec 2021
 
 v0.1.1 _docs: added requirements, domain model and db schema_ - 09 Dec 2021
+
+v0.2.0: _feat: added next app_ - 12 Dec 2021 
 
 ---
 
