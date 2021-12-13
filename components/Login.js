@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
+
 export default function LoginForm({ login }) {
   return (
     <div className="absolute flex w-2/3 bg-gray-300 rounded-3xl ">
@@ -112,3 +113,5 @@ export default function LoginForm({ login }) {
     </div>
   );
 }
+
+
