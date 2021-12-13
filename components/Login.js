@@ -8,17 +8,10 @@ export default function LoginForm({ login }) {
         
         <div className="absolute flex w-2/3 bg-gray-300 rounded-3xl ">
             <div className="flex w-full rounded z-1 color-gray-200" style={{ width: "100%" }}>
-                {/* <Image
-                    src=""
-                    alt="login-bg"
-                    layout="fill"
-                    objectFit="cover"
-                    className="w-full z1 rounded-3xl "
-                    priority={true}
-                    /> */}
-            
-
-                <div className="relative z-0 flex w-1/2 py-10" >
+ 
+                <video playsInline autoPlay loop muted className="absolute w-full z1 rounded-3xl " layout="fill" objectFit="cover" src = "/Galio.webm" />
+  
+                <div className="z-0 flex w-1/2 py-10" >
                     <form className="w-full" onSubmit={(event) => { event.preventDefault(), login(event.target.userName.value, event.target.password.value) }}>
                         <div className="z-0 justify-start w-1/3 text-xl font-bold ">
                             <h2 className="z-0 justify-start text-3xl font-bold text-white">Login</h2>
