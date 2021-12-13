@@ -66,7 +66,6 @@
 - tailwind
 - axios
 
-
 ---
 
 ## Getting Started
@@ -79,9 +78,17 @@
 
 v0.1: _feat: started project and created project repo_ - 08 Dec 2021
 
-v0.1.1 _docs: added requirements, domain model and db schema_ - 09 Dec 2021
+v0.1.1 _docs: added requirements, domain model and db schema_ - 08 Dec 2021
 
-v0.2.0: _feat: added next app_ - 12 Dec 2021 
+v0.1.2 _docs: edited domain model and db schema_ - 09 Dec 2021
+
+v0.2.1 _feat: created login component and added icons assets_ - 12 Dec 2021
+
+v0.2.2 _fix: added to login component_ - 12 Dec 2021
+
+v0.2.3 _feat:added image bg to login page_ - 13 Dec 2021
+
+v0.2.4 _feat:added webm background to login page and included assets_ - 13 Dec 2021
 
 v0.3.0 _feat: compleated championbrowse and itembrowse componnent_ 12 Dec 2021
 ---
