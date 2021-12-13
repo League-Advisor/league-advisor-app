@@ -1,9 +1,10 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
 
 export default function Items() {
     return (
         <div>
-            <h1>Items</h1>
+            <Navbar />
         </div>
     )
 }

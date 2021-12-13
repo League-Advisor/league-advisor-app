@@ -1,9 +1,10 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
 
-export default function RankedItems() {
+export default function rankedItems() {
     return (
         <div>
-
+            <Navbar />
         </div>
     )
 }
