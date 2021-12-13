@@ -83,6 +83,7 @@ v0.2.3 _feat:added image bg to login page_ - 13 Dec 2021
 
 v0.2.4 _feat:added webm background to login page and included assets_ - 13 Dec 2021
 
+v0.3 _feat:update dashboard page and connect it with other pages , did some css_ - 13 Dec 2021
 ---
 
 ## Test Coverage
