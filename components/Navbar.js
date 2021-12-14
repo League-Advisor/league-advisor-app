@@ -8,8 +8,8 @@ export default function Navbar() {
     return (
 
         <>
-            <nav className="sticky top-0 z-0 flex-col justify-between w-2/12 h-screen rounded-md ">
-                <div className="h-full bg-black ">
+            <nav className="sticky top-0 z-0 flex-col justify-between h-screen rounded-md w-96 ">
+                <div className="w-full h-full bg-black ">
                     <div className="flex justify-center py-20 pr-4 shadow-sm">
                         <Image src="/logo.png" width="140" height="140" alt="logo" />
 
