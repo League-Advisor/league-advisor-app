@@ -1,3 +1,4 @@
+
 import Head from 'next/head'
 
 // import LoginForm from '../components/Login'
@@ -23,12 +24,15 @@ export default function Home() {
 
   return (
 
+
     <div className="flex flex-col justify-center min-h-screen p-3">
+
 
       <Head>
         <title>League Advisor</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
+
 
 
 
@@ -42,6 +46,7 @@ export default function Home() {
         {/* <Champion /> */}
 
 
+
       <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
 
         {user ? <>HELLO!</> : <LoginForm login={login} />}
@@ -50,9 +55,6 @@ export default function Home() {
       </main>
 
 
-
-      </main>
-
     </div>
-  )
+  );
 }
