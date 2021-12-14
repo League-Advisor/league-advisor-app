@@ -90,7 +90,10 @@ v0.2.3 _feat:added image bg to login page_ - 13 Dec 2021
 
 v0.2.4 _feat:added webm background to login page and included assets_ - 13 Dec 2021
 
+v0.2.5 _feat:created profile skeleton_ - 13 Dec 2021
+
 v0.3.0 _feat: compleated championbrowse and itembrowse componnent_ 12 Dec 2021
+
 ---
 
 ## Test Coverage

@@ -4,22 +4,21 @@ import Image from "next/image";
 
 
 export default function LoginForm({ login }) {
-
     return (
         
-        <div className="absolute flex w-2/3 bg-gray-300 rounded-3xl ">
+        <div className="absolute flex w-full min-h-screen bg-gray-300">
             <div className="flex w-full rounded z-1 color-gray-200" style={{ width: "100%" }}>
  
-                <video playsInline autoPlay loop muted className="absolute w-full z1 rounded-3xl " layout="fill" objectFit="cover" src = "/Galio.webm" />
+                <video playsInline autoPlay loop muted className="absolute w-full z-1" layout="fill" objectFit="cover" src = "/Galio.webm" />
   
-                <div className="z-0 flex w-1/2 py-10" >
-                    <form className="w-full" onSubmit={(event) => { event.preventDefault(), login(event.target.userName.value, event.target.password.value) }}>
+                <div className="z-0 flex w-1/2 py-20" >
+                    <form className="w-full py-20" onSubmit={(event) => { event.preventDefault(), login(event.target.userName.value, event.target.password.value) }}>
                         <div className="z-0 justify-start w-1/3 text-xl font-bold ">
-                            <h2 className="z-0 justify-start text-3xl font-bold text-white">Login</h2>
+                            <h2 className="z-0 justify-start text-5xl font-bold text-white">Login</h2>
                         </div>
                         <div className="px-5 py-5" >
 
-                            <div className="items-start py-5 pl-5">
+                            <div className="items-start py-5 ">
                                 <label className="z-0 block w-1/3 my-2 mt-5 text-xl font-bold tracking-wide text-white " for="userName">
                                     username
                                 </label>
@@ -43,8 +42,8 @@ export default function LoginForm({ login }) {
                         </div>
                     </form >
                 </div>
-            <div className="z-0 flex justify-center w-2/3 py-10 ">
-                <div className="z-0 w-5/6 px-5 bg-gray-100/90 rounded-xl ">
+            <div className="z-0 flex justify-center w-2/3 py-20 ">
+                <div className="z-0 w-5/6 px-5 py-20 bg-gray-100/90 rounded-xl">
                     <div className="z-0 justify-start p-5 ">
                         <h2 className="z-0 py-5 text-3xl font-bold ">
                             Welcome to League Advisor
