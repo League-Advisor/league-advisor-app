@@ -25,7 +25,7 @@ export default function Home() {
 
 
   return (
-    <div className="flex flex-col justify-center min-h-screen p-3">
+    <div className="flex flex-col justify-center min-h-screen p-1">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.png" />
@@ -34,23 +34,9 @@ export default function Home() {
 
       <main className="flex justify-center">
         {/* <Signup handleSignUpForm={handleSignUpForm}/> */}
-		<SoloItem />
-		{/* <Login /> */}
-
+      <SoloItem />
+      {/* <Login /> */}
       </main>
-
-      <footer>
-        
-
-
-      <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
-        {user ? <>HELLO!</> : <LoginForm login={login} />}
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-
-
-      </footer>
     </div>
   )
 }

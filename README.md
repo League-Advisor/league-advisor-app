@@ -96,6 +96,8 @@ v0.2.5 _feat:added webm background to login page and included assets_ - 13 Dec 2
 
 v0.2.6 _feat:added solo and ranked component_ - 13 Dec 2021
 
+v0.2.7 _feat: fix solo build component_ - 14 Dec 2021
+
 ---
 
 ## Test Coverage
