@@ -1,6 +1,7 @@
 
 import Head from 'next/head'
 
+
 import Login from '../components/Login'
 import Signup from '../components/Signup'
 import SoloItem from '../components/SoloItem'
@@ -16,6 +17,7 @@ export default function Home() {
     const email = e.target.email.value
     const summonerName = e.target.summonerName.value
     const userName = e.target.userName.value
+
 
     const password1 = e.target.password1.value
     const password2 = e.target.password2.value
@@ -38,25 +40,11 @@ export default function Home() {
         <title>League Advisor</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
+
       {/* <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center"> */}
 
       <Dashboard />
-      {/* </main> */}
-      {/* {user ? <Dashboard /> : <LoginForm login={login} />} */}
 
-      {/* <main className="flex justify-center"> */}
-      {/* <LoginForm login={login} /> */}
-      {/* /////////////////////////////////////////////////////// */}
-      {/* <Items/> */}
-      {/* <Champion /> */}
-
-
-
-      {/* <main className="flex justify-center"> */}
-      {/* <Signup handleSignUpForm={handleSignUpForm}/> */}
-      {/* <SoloItem /> */}
-      {/* <Login /> */}
-      {/* </main> */}
     </div>
   )
 }

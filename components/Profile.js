@@ -1,7 +1,9 @@
 import Image from "next/image";
 import championKeys from "../public/static/championKeys";
+import { useAuth } from '../contexts/auth'
 
-export default function Profile({ user }) {
+export default function Profile() {
+    const { user } = useAuth();
 
     return (
 
@@ -19,6 +21,7 @@ export default function Profile({ user }) {
                         />
                     </div>
                 </div>
+
 
                 <div className="py-10">
 
@@ -232,6 +235,7 @@ export default function Profile({ user }) {
                                                     />
                                                     : <></>
                                             )}
+
 
                                         </td>
 
