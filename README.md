@@ -60,6 +60,13 @@
 [GitHub Projects - League Advisor Web App](https://github.com/orgs/League-Advisor/projects/2)
 
 
+
+- yarn
+- next 
+- react
+- javascript
+- tailwind
+
 - axios
 
 ---
@@ -97,6 +104,24 @@ v0.2.5 _feat:added webm background to login page and included assets_ - 13 Dec 2
 v0.2.6 _feat:added solo and ranked component_ - 13 Dec 2021
 
 v0.2.7 _feat: fix solo build component_ - 14 Dec 2021
+
+v0.2.3: _feat: added sign up componenet_ - 12 Dec 2021 
+
+v0.2.4 _feat:added webm background to login page and included assets_ - 13 Dec 2021
+
+v0.2.5 _feat:created profile skeleton_ - 13 Dec 2021
+
+v0.2.6 _feat:added image bg to login page_ - 13 Dec 2021
+
+v0.2.7 _feat:added solo and ranked component_ - 13 Dec 2021
+
+v0.2.8 _refactore:added solo and ranked component_ - 14 Dec 2021
+
+v0.3 _feat:update dashboard page and connect it with other pages , did some css_ - 13 Dec 2021
+
+v0.4.0 _feat: compleated championbrowse and itembrowse componnent_ 12 Dec 2021
+
+
 
 ---
 
