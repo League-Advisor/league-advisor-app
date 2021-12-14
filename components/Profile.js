@@ -7,6 +7,7 @@ export default function Profile({ user }) {
 
         <>
 
+
             <div className="w-full px-4 mb-12">
                 <div className="relative flex flex-col w-full min-w-0 text-white break-words bg-pink-900 shadow-lg rounded-3xl">
                     <div className="px-4 py-3 mb-0 border-0 rounded-t">
@@ -60,11 +61,13 @@ export default function Profile({ user }) {
                                                     </div>
                                                 ) :
                                                 <div className="px-20 text-xl">
+
+          
                                                     <Image
                                                         src={'/static/images/tier-icons/base-icons/provisional.png'}
                                                         width='200'
                                                         height='200'
-                                                    />
+
                                                 </div>
                                             }
 
@@ -262,6 +265,8 @@ export default function Profile({ user }) {
                             </div>
                         </div>
                     </div>
+
+                                 
                 </div>
             </div>
 

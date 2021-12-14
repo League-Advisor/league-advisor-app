@@ -1,25 +1,49 @@
+
 import Head from 'next/head'
+
+// import LoginForm from '../components/Login'
+// import { useAuth } from '../contexts/auth'
+
 import LoginForm from '../components/Login'
 import Profile from '../components/Profile';
 import { useAuth } from '../contexts/auth'
 
+import Dashboard from '../components/Dashboard'
+
+
+
+import Items from '../components/ItemBrowse'
+import Champion from '../components/championsbrowse'
+
 export default function Home() {
 
+  // const { user, login, logout } = useAuth();
+
+
   const { user, login, logout } = useAuth();
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+
+
+    <div className="flex flex-col justify-center min-h-screen p-3">
       <Head>
-        <title>Create Next App</title>
+        <title>League Advisor</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
+      <Dashboard />
+      {/* {user ? <Dashboard /> : <LoginForm login={login} />} */}
 
-      <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
-        {user ? <Profile user = {user} /> : <LoginForm login={login} />}
-      </main>
+      {/* <main className="flex justify-center"> */}
+      {/* <LoginForm login={login} /> */}
+      {/* /////////////////////////////////////////////////////// */}
+      {/* <Items/> */}
+      {/* <Champion /> */}
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
+      {/* <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center"> */}
 
-      </footer>
-    </div>
-  )
+      {/* {user ? <>HELLO!</> : <LoginForm login={login} />}
+
+        {user ? <Profile user = {user} /> : <LoginForm login={login} />} */}
+    </div >
+  );
 }
