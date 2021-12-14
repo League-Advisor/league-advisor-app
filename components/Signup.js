@@ -7,6 +7,7 @@ export default function signup(props) {
       <div className="flex items-center justify-center min-h-full px-4 py-12 sm:px-6 lg:px-8">
         <div className="w-full max-w-md space-y-8">
           <div>
+
             <Image src="/logo.png" width={360} height={360} />
             <h2 className="mt-6 text-3xl font-extrabold text-center text-gray-900">
               Sign in to your account

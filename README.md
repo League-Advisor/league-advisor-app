@@ -60,6 +60,7 @@
 [GitHub Projects - League Advisor Web App](https://github.com/orgs/League-Advisor/projects/2)
 
 
+
 - yarn
 - next 
 - react
@@ -87,6 +88,22 @@ v0.1.2 _docs: edited domain model and db schema_ - 09 Dec 2021
 v0.2.1 _feat: created login component and added icons assets_ - 12 Dec 2021
 
 v0.2.2 _fix: added to login component_ - 12 Dec 2021
+
+
+
+v0.2.4 _feat:added webm background to login page and included assets_ - 13 Dec 2021
+
+v0.2.3: _feat: added sign up componenet_ - 12 Dec 2021 
+
+v0.2.4 _feat:added image bg to login page_ - 13 Dec 2021
+
+v0.2.3 _feat:added image bg to login page_ - 13 Dec 2021
+
+v0.2.5 _feat:added webm background to login page and included assets_ - 13 Dec 2021
+
+v0.2.6 _feat:added solo and ranked component_ - 13 Dec 2021
+
+v0.2.7 _feat: fix solo build component_ - 14 Dec 2021
 
 v0.2.3: _feat: added sign up componenet_ - 12 Dec 2021 
 
