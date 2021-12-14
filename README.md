@@ -85,6 +85,8 @@ v0.2.4 _feat:added webm background to login page and included assets_ - 13 Dec 2
 
 v0.2.5 _feat:created profile skeleton_ - 13 Dec 2021
 
+v0.4.1 _feat:added css to profile component_ - 14 Dec 2021
+
 ---
 
 ## Test Coverage
