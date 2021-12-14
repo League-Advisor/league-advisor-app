@@ -232,6 +232,7 @@ export default function Profile({ user }) {
                                                     />
                                                     : <></>
                                             )}
+
                                         </td>
 
                                         <td>
@@ -246,6 +247,7 @@ export default function Profile({ user }) {
 
                             </tbody>
                         </table>
+
 
 
                     </div>
