@@ -73,7 +73,7 @@ export default function LoginForm({ login }) {
                 </div>
             </div>
 
-              <p className="text-xl font-bold">
+            <p className="text-xl font-bold">
                 League Advisor is your perfect League of Legends companion!
                 <br /> <br />
                 It is deigned to enhance your experience with League of Legends
@@ -81,18 +81,17 @@ export default function LoginForm({ login }) {
                 experience. Stay up to date with game news, explore game
                 champions, items and find the prefect items build for any
                 situation, and more!
-              </p>
-              <br />
-              <br />
-              <h4 className="text-xl font-bold">
+            </p>
+            <br />
+            <br />
+            <h4 className="text-xl font-bold">
                 Not a member already?
                 <Link href="#">
-                  <a className="text-blue-500 hover:text-red"> Sign up here!</a>
+                    <a className="text-blue-500 hover:text-red"> Sign up here!</a>
                 </Link>
-              </h4>
-            </div>
-          </div>
+            </h4>
         </div>
+
     );
 }
 

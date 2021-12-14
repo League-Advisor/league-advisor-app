@@ -8,22 +8,23 @@ import SoloItem from '../components/SoloItem'
 import LoginForm from '../components/Login'
 import Profile from '../components/Profile';
 import { useAuth } from '../contexts/auth'
-	
+import Dashboard from '../components/Dashboard'
+
 export default function Home() {
-  function handleSignUpForm(e){
-		e.preventDefault()
-		const email=e.target.email.value
-		const summonerName=e.target.summonerName.value
-		const userName=e.target.userName.value
-		
-		const password1=e.target.password1.value
-		const password2=e.target.password2.value
-		if(password1 !== password2) {
-			window.alert("Passwords do not match!")
-			
-		 }
-		console.log(email,summonerName,userName,password1,password2);
-	}
+  function handleSignUpForm(e) {
+    e.preventDefault()
+    const email = e.target.email.value
+    const summonerName = e.target.summonerName.value
+    const userName = e.target.userName.value
+
+    const password1 = e.target.password1.value
+    const password2 = e.target.password2.value
+    if (password1 !== password2) {
+      window.alert("Passwords do not match!")
+
+    }
+    console.log(email, summonerName, userName, password1, password2);
+  }
 
   const { user, login, logout } = useAuth();
 
@@ -51,11 +52,11 @@ export default function Home() {
 
 
 
-      <main className="flex justify-center">
-        {/* <Signup handleSignUpForm={handleSignUpForm}/> */}
-      <SoloItem />
+      {/* <main className="flex justify-center"> */}
+      {/* <Signup handleSignUpForm={handleSignUpForm}/> */}
+      {/* <SoloItem /> */}
       {/* <Login /> */}
-      </main>
+      {/* </main> */}
     </div>
   )
 }
