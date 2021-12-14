@@ -1,68 +1,141 @@
 import React from "react";
 import Image from "next/image";
 
-export default function signup(props) {
+import axios from "axios";
+import { useAuth } from '../contexts/auth';
+
+export default function signup() {
+
+  const { user, login } = useAuth();
+
+  const registrationUrl = process.env.NEXT_PUBLIC_REGISTRATION_URL
+
+
+
+
+  async function registerHandler(event) {
+    event.preventDefault();
+    let registrationRequest = {
+      "username": event.target.username.value,
+      "password": event.target.password1.value,
+      "email": event.target.email.value,
+      "summoner_name": event.target.summoner_name.value,
+      "summoner_server": event.target.summoner_server.value,
+    }
+
+    console.log(registrationRequest, registrationUrl);
+
+    const response = await axios.post(registrationUrl, registrationRequest)
+    console.log(response);
+
+    // if (response.data["message"] == "user already exists"){
+    //   alert(response.data["message"])
+    // }
+
+    if (response.data){
+      await login(event.target.username.value, event.target.password1.value)
+      console.log(user);
+    }
+  }
+
   return (
     <div>
-      <div className="flex items-center justify-center min-h-full px-4 py-12 sm:px-6 lg:px-8">
+      <div className="flex items-center justify-center w-full min-h-full px-4 py-12 sm:px-6 lg:px-8">
         <div className="w-full max-w-md space-y-8">
           <div>
 
             <Image src="/logo.png" width={360} height={360} />
+
             <h2 className="mt-6 text-3xl font-extrabold text-center text-gray-900">
-              Sign in to your account
+              SIGN UP
             </h2>
+
             <p className="mt-2 text-sm text-center text-gray-600"></p>
           </div>
+
           <form
             className="mt-8 space-y-6"
-            action="#"
             method="POST"
-            onSubmit={props.handleSignUpForm}
+            onSubmit={(event) => { registerHandler(event) }}
           >
-            <div className="-space-y-px rounded-md shadow-sm">
-              <div>
-                <label htmlFor="email-address" className="sr-only">
-                  Email
+
+            <div className="-space-y-px rounded-md ">
+
+
+
+              <div className="py-5">
+                <label className="py-10 text-xl font-medium" htmlFor="username" >
+                  Username
                 </label>
                 <input
-                  id="email-address"
+                  id="username"
+                  name="username"
+                  type="text"
+                  required
+                  className="relative block w-full px-3 py-3 mt-5 text-lg text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10"
+                  placeholder="Add a Username"
+                />
+              </div>
+
+
+              <div className="py-5">
+                <label className="py-10 text-xl font-medium" className="py-10 text-xl font-medium" for="email">Email</label>
+
+                <input
+                  id="email"
                   name="email"
                   type="email"
                   autoComplete="email"
                   required
-                  className="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                  className="relative block w-full px-3 py-3 mt-5 text-lg text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10"
                   placeholder="Enter your Email"
                 />
+
               </div>
-              <div>
-                <label htmlFor="Game-name" className="sr-only">
+
+              <div className="py-5">
+                <label className="py-10 text-xl font-medium" htmlFor="summoner_name" >
                   Summoner name
                 </label>
                 <input
-                  id="Game-name"
-                  name="summonerName"
+                  id="summoner_name"
+                  name="summoner_name"
                   type="text"
                   required
-                  className="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                  className="relative block w-full px-3 py-3 mt-5 text-lg text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10"
                   placeholder="Add your Summoner name"
                 />
               </div>
-              <div>
-                <label htmlFor="user-name" className="sr-only">
-                  Username
+
+              <div className="py-5">
+                <label className="py-10 text-xl font-medium" htmlFor="summoner_server" >
+                  Summoner name
                 </label>
-                <input
-                  id="user-name"
-                  name="userName"
-                  type="text"
+                <select
+                  id="summoner_server"
+                  name="summoner_server"
+                  type="select"
                   required
-                  className="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Add a Username"
-                />
+                  className="relative block w-full px-3 py-3 mt-5 text-lg text-gray-900 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10"
+                >
+                  <option value="br1">Brazil</option>
+                  <option value="la1">Latin America 1</option>
+                  <option value="la2">Latin America 2</option>
+                  <option value="na1">North America</option>
+                  <option value="eun1">Europe Nordic and East</option>
+                  <option value="euw1">Europe West</option>
+                  <option value="ru">Russia</option>
+                  <option value="tr1">Turkey</option>
+                  <option value="oc1">Oceania</option>
+                  <option value="jp1">Japan</option>
+                  <option value="kr">Korea</option>
+
+
+                </select>
               </div>
-              <div>
-                <label htmlFor="password1" className="sr-only">
+
+              <div className="py-5">
+                <label className="py-10 text-xl font-medium" htmlFor="password1" >
                   Password
                 </label>
                 <input
@@ -71,12 +144,13 @@ export default function signup(props) {
                   type="password"
                   autoComplete="current-password"
                   required
-                  className="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                  className="relative block w-full px-3 py-3 mt-5 text-lg text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10"
                   placeholder="Password"
                 />
               </div>
-              <div>
-                <label htmlFor="password2" className="sr-only">
+
+              <div className="py-5">
+                <label className="py-10 text-xl font-medium" htmlFor="password2" >
                   Confirm Password
                 </label>
                 <input
@@ -85,16 +159,16 @@ export default function signup(props) {
                   type="password"
                   autoComplete="current-password"
                   required
-                  className="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                  className="relative block w-full px-3 py-3 mt-5 text-lg text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10"
                   placeholder="Confirm Password"
                 />
               </div>
             </div>
 
-            <div>
+            <div className="py-5">
               <button
                 type="submit"
-                className="relative flex justify-center w-full px-4 py-2 text-sm font-medium text-black bg-indigo-600 border border-transparent rounded-md group hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="relative flex justify-center w-full px-4 py-4 text-xl font-bold text-white bg-indigo-600 border border-transparent rounded-md group hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 Sign Up
               </button>

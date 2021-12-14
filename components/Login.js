@@ -1,6 +1,8 @@
 import Link from "next/link";
 
+
 export default function LoginForm({ login }) {
+
     return (
         
         <div className="absolute flex w-full min-h-screen bg-gray-300">
@@ -66,5 +68,24 @@ export default function LoginForm({ login }) {
         </div>
 
         </div>
+            <p className="text-xl font-bold">
+                League Advisor is your perfect League of Legends companion!
+                <br /> <br />
+                It is deigned to enhance your experience with League of Legends
+                and help you get more into the game regardless of your rank or
+                experience. Stay up to date with game news, explore game
+                champions, items and find the prefect items build for any
+                situation, and more!
+            </p>
+            <br />
+            <br />
+            <h4 className="text-xl font-bold">
+                Not a member already?
+                <Link href="#">
+                    <a className="text-blue-500 hover:text-red"> Sign up here!</a>
+                </Link>
+            </h4>
+        </div>
+
     );
 }
