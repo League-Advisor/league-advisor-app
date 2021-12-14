@@ -30,9 +30,18 @@ export function AuthProvider(props) {
         const newState = {
             tokens: response.data,
             user: {
+
+                id: decodedAccess.user_id,
                 username: decodedAccess.username,
                 email: decodedAccess.email,
-                id: decodedAccess.user_id
+                summoner_name: decodedAccess.summoner_name,
+                profile_icon: decodedAccess.profile_icon,
+                summoner_server: decodedAccess.summoner_server,
+                summoner_level: decodedAccess.summoner_level, 
+                summoner_rank: decodedAccess.summoner_rank,
+                summoner_champion_mastery:decodedAccess.summoner_champion_mastery,
+                summoner_match_history: decodedAccess.summoner_match_history,
+
             },
         }
 
