@@ -1,12 +1,13 @@
 import Image from "next/image";
 import championKeys from "../public/static/championKeys";
+import { useAuth } from '../contexts/auth'
 
-export default function Profile({ user }) {
+export default function Profile() {
+    const { user } = useAuth();
 
     return (
 
         <>
-
 
             <div className="w-full px-4 mb-12">
                 <div className="relative flex flex-col w-full min-w-0 text-white break-words bg-pink-900 shadow-lg rounded-3xl">
@@ -61,13 +62,11 @@ export default function Profile({ user }) {
                                                     </div>
                                                 ) :
                                                 <div className="px-20 text-xl">
-
-          
                                                     <Image
                                                         src={'/static/images/tier-icons/base-icons/provisional.png'}
                                                         width='200'
                                                         height='200'
-
+                                                    />
                                                 </div>
                                             }
 
@@ -108,7 +107,7 @@ export default function Profile({ user }) {
 
 
                                     <div className="p-2 bg-gray-800 rounded-lg tems-center">
-                                            <h4 className="text-2xl font-bold">Match History</h4>
+                                        <h4 className="text-2xl font-bold">Match History</h4>
                                         <div className="overflow-hidden ">
                                             <table className="w-full py-8 ">
                                                 <thead className="">
@@ -265,8 +264,6 @@ export default function Profile({ user }) {
                             </div>
                         </div>
                     </div>
-
-                                 
                 </div>
             </div>
 
