@@ -1,5 +1,6 @@
 module.exports = {
     images: {
-      domains : ['ddragon.leagueoflegends.com']
+        domains: ['ddragon.leagueoflegends.com']
     },
-  };
+}
+
