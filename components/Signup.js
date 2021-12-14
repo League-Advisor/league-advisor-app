@@ -1,6 +1,6 @@
 import React from "react";
-//className="w-auto h-12 mx-auto"
 import Image from "next/image";
+
 export default function signup(props) {
   return (
     <div>

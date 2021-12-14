@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Login from '../components/Login'
 import Signup from '../components/Signup'
 import SoloItem from '../components/SoloItem'
-
+import Dashboard from '../components/Dashboard'
 import LoginForm from '../components/Login'
 import Profile from '../components/Profile';
 import { useAuth } from '../contexts/auth'
@@ -35,7 +35,7 @@ export default function Home() {
         <title>League Advisor</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <Dashboard />
+      {/* <Dashboard /> */}
       {/* {user ? <Dashboard /> : <LoginForm login={login} />} */}
 
       {/* <main className="flex justify-center"> */}
