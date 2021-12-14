@@ -89,8 +89,6 @@ v0.2.1 _feat: created login component and added icons assets_ - 12 Dec 2021
 
 v0.2.2 _fix: added to login component_ - 12 Dec 2021
 
-
-
 v0.2.4 _feat:added webm background to login page and included assets_ - 13 Dec 2021
 
 v0.2.3: _feat: added sign up componenet_ - 12 Dec 2021 
@@ -117,7 +115,7 @@ v0.2.7 _feat:added solo and ranked component_ - 13 Dec 2021
 
 v0.2.8 _refactore:added solo and ranked component_ - 14 Dec 2021
 
-v0.3 _feat:update dashboard page and connect it with other pages , did some css_ - 13 Dec 2021
+v0.3.0 _feat:update dashboard page and connect it with other pages , did some css_ - 13 Dec 2021
 
 v0.4.0 _feat: compleated championbrowse and itembrowse componnent_ 12 Dec 2021
 
@@ -128,6 +126,8 @@ v0.4.2 _feat:handeled Signup component functionality_ - 14 Dec 2021
 v0.4.3 _feat:edit css for apps_ - 14 Dec 2021
 
 v0.4.4 _feat:edit css for dashboard ,champions and items_ - 14 Dec 2021
+
+v0.4.7 _feat: handled SoloItem component render_ 14 Dec 2021
 
 ---
 

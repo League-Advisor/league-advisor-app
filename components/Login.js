@@ -1,10 +1,7 @@
-
 import Link from "next/link";
-import Image from "next/image";
 
 
 export default function LoginForm({ login }) {
-
 
     return (
         
@@ -70,6 +67,7 @@ export default function LoginForm({ login }) {
             </div>
         </div>
 
+        </div>
             <p className="text-xl font-bold">
                 League Advisor is your perfect League of Legends companion!
                 <br /> <br />
