@@ -6,7 +6,7 @@ import Champion from '../components/championsbrowse';
 export default function champion() {
 
     return (
-        <div>
+        <div className="flex">
             <Head>
                 <title>League Advisor</title>
                 <link rel="icon" href="/favicon.png" />

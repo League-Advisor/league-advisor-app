@@ -6,14 +6,16 @@ import Cards from './Cards'
 export default function Dashboard() {
 
     return (
-        <main className="flex w-screen ">
+        <>
+            <div className="flex">
+                <Navbar />
+
+                <video playsInline autoPlay loop muted className="w-10/12 h-full " layout="fill" objectFit="cover" src="/Leona.webm" />
+
+                {/* <Cards /> */}
 
 
-            <video playsInline autoPlay loop muted className="absolute w-10/12 h-full -z-1" layout="fill" objectFit="cover" src="/Leona.webm" />
-
-            <Navbar />
-            <Cards />
-
-        </main>
+            </div>
+        </>
     )
 }

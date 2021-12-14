@@ -106,6 +106,7 @@ v0.4.0 _feat: compleated championbrowse and itembrowse componnent_ 12 Dec 2021
 
 v0.4.1 _feat:added css to profile component_ - 14 Dec 2021
 
+v0.4.2 _feat:edit css for apps_ - 14 Dec 2021
 
 
 ---

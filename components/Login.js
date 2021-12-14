@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function LoginForm({ login }) {
+export default function Login({ login }) {
     return (
 
         <div className="absolute flex w-full min-h-screen bg-gray-300">

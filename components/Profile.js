@@ -7,7 +7,6 @@ export default function Profile({ user }) {
 
         <>
 
-
             <div className="w-full px-4 mb-12">
                 <div className="relative flex flex-col w-full min-w-0 text-white break-words bg-pink-900 shadow-lg rounded-3xl">
                     <div className="px-4 py-3 mb-0 border-0 rounded-t">
@@ -61,13 +60,11 @@ export default function Profile({ user }) {
                                                     </div>
                                                 ) :
                                                 <div className="px-20 text-xl">
-
-          
                                                     <Image
                                                         src={'/static/images/tier-icons/base-icons/provisional.png'}
                                                         width='200'
                                                         height='200'
-
+                                                    />
                                                 </div>
                                             }
 
@@ -106,9 +103,8 @@ export default function Profile({ user }) {
                                         </div>
                                     </div>
 
-
                                     <div className="p-2 bg-gray-800 rounded-lg tems-center">
-                                            <h4 className="text-2xl font-bold">Match History</h4>
+                                        <h4 className="text-2xl font-bold">Match History</h4>
                                         <div className="overflow-hidden ">
                                             <table className="w-full py-8 ">
                                                 <thead className="">
@@ -129,7 +125,6 @@ export default function Profile({ user }) {
                                                         <th className="p-4 " >Match Status</th>
                                                     </tr>
                                                 </thead>
-
                                                 <tbody>
                                                     {user.summoner_match_history.map(match =>
                                                         <tr key={match["metadata"]["matchId"]} className="odd:bg-gray-700 even:bg-gray-500 " >
@@ -265,8 +260,6 @@ export default function Profile({ user }) {
                             </div>
                         </div>
                     </div>
-
-                                 
                 </div>
             </div>
 
