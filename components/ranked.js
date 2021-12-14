@@ -5,7 +5,7 @@ import axios from "axios";
 
 import championNamse from "../public/static/championNames";
 
-export default function Ranked() {
+export default function RankedItems() {
   let flag = false;
   async function handleSoloSearch(e) {
     e.preventDefault();
