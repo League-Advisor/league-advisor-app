@@ -89,6 +89,7 @@ v0.2.4 _feat:added image bg to login page_ - 13 Dec 2021
 
 v0.2.6 _feat:added solo and ranked component_ - 13 Dec 2021
 
+v0.2.7 _refactore:added solo and ranked component_ - 14 Dec 2021
 ---
 
 ## Test Coverage
