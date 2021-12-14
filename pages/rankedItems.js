@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Head from 'next/head'
+import RankedItems from '../components/RankedItems'
 
 export default function rankedItems() {
     return (
@@ -10,6 +11,7 @@ export default function rankedItems() {
                 <link rel="icon" href="/favicon.png" />
             </Head>
             <Navbar />
+            <RankedItems />
         </div>
     )
 }

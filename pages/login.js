@@ -10,8 +10,6 @@ export default function login() {
                 <link rel="icon" href="/favicon.png" />
             </Head>
             <Login />
-
-
         </div>
     )
 }

@@ -26,35 +26,24 @@ export default function Home() {
 
 
     <div className="flex flex-col justify-center min-h-screen p-3">
-
-
       <Head>
         <title>League Advisor</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
-
-
-
-
-//       <Dashboard />
+      <Dashboard />
       {/* {user ? <Dashboard /> : <LoginForm login={login} />} */}
 
-      <main className="flex justify-center">
-        {/* <LoginForm login={login} /> */}
-        {/* /////////////////////////////////////////////////////// */}
-        {/* <Items/> */}
-        {/* <Champion /> */}
+      {/* <main className="flex justify-center"> */}
+      {/* <LoginForm login={login} /> */}
+      {/* /////////////////////////////////////////////////////// */}
+      {/* <Items/> */}
+      {/* <Champion /> */}
 
+      {/* <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center"> */}
 
+      {/* {user ? <>HELLO!</> : <LoginForm login={login} />}
 
-      <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
-
-        {user ? <>HELLO!</> : <LoginForm login={login} />}
-
-        {user ? <Profile user = {user} /> : <LoginForm login={login} />}
-      </main>
-
-
-    </div>
+        {user ? <Profile user = {user} /> : <LoginForm login={login} />} */}
+    </div >
   );
 }

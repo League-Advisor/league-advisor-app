@@ -1,17 +1,15 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Signup from '../components/Signup'
 import Head from 'next/head'
-import Items from '../components/ItemBrowse'
 
-export default function items() {
+export default function signup() {
     return (
-        <div className="flex">
+        <div >
             <Head>
                 <title>League Advisor</title>
                 <link rel="icon" href="/favicon.png" />
             </Head>
-            <Navbar />
-            <Items />
+            <Signup />
         </div>
     )
 }

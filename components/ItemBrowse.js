@@ -33,7 +33,7 @@ export default function Items() {
 
     return (
         <>
-            <div className="grid w-full grid-cols-9 grid-rows-4 gap-1 mt-20 rounded-lg " style={content_bg} >
+            <div className="grid w-full grid-cols-9 grid-rows-4 " style={content_bg} >
                 {itemsnumbers.map((item, idx) => {
                     return (
                         <div className="flex justify-center mt-2 ml-4 duration-150 transform bg-gray-400 rounded-lg shadow-lg w-28 bg-opacity-30 hover:bg-gray-100 hover:bg-opacity-100 transision hover:-translate-y-2" key={idx}>

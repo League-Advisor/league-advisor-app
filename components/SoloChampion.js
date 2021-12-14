@@ -165,7 +165,7 @@ const championArray = [
   "Zyra",
 ];
 
-export default function SoloItem() {
+export default function SoloChampion() {
   let z;
   let flagChampion = false;
   const [response, setResponse] = useState({});
@@ -178,7 +178,7 @@ export default function SoloItem() {
     for (let i = 0; i < championArray.length; i++) {
       n++;
       if (championName.toLowerCase() == championArray[i].toLowerCase()) {
-       z=n;
+        z = n;
         const res = await axios.get(
           `http://127.0.0.1:8000/solo_champion/?champion_name=${championName}`
         );
@@ -186,7 +186,7 @@ export default function SoloItem() {
         flagChampion = true;
       }
     }
-	console.log(z);
+    console.log(z);
   }
 
   return (
@@ -218,12 +218,12 @@ export default function SoloItem() {
           </form>
         </div>
       </div>
-      {flagChampion ? 
+      {flagChampion ?
         <img
           src={`/static/images/champion/${championArray[z]}.png`}
           className="absolute w-40 h-50 top-20 left-40"
         />
-      :(<></>)}
+        : (<></>)}
     </>
   );
 }
