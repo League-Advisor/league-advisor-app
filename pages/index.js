@@ -16,6 +16,7 @@ export default function Home() {
 
       {/* <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center"> */}
         {user ? <Dashboard /> : <LoginForm login={login} />}
+
       {/* </main> */}
     </div>
   )
