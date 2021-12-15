@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router'
-
+import Image from 'next/image';
 
 export default function LoginForm({ login }) {
     const router = useRouter()
     return (
 
-        <div className="absolute flex w-full min-h-screen bg-gray-300">
+        <div className="absolute flex w-full min-h-screen text-center bg-gray-300">
             <div className="flex w-full rounded z-1 color-gray-200" style={{ width: "100%" }}>
 
                 <video playsInline autoPlay loop muted className="absolute w-full z-1" layout="fill" objectFit="cover" src="/Galio.webm" />
@@ -43,13 +43,20 @@ export default function LoginForm({ login }) {
                 </div>
                 <div className="z-0 flex justify-center w-2/3 py-20 ">
                     <div className="z-0 w-5/6 px-5 py-20 bg-gray-100/90 rounded-xl">
+                    <Image
+                                    src='/logo.png'
+                                    width={300}
+                                    height={300 }
+                                />
                         <div className="z-0 justify-start p-5 ">
-                            <h2 className="z-0 py-5 text-3xl font-bold ">
+                            
+                            <h2 className="z-0 py-5 text-4xl font-bold ">
                                 Welcome to League Advisor
                             </h2>
                             <br />
 
                             <p className="text-xl font-bold">
+                           
                                 League Advisor is your perfect League of Legends companion!
                                 <br /> <br />
                                 It is deigned to enhance your experience with League of Legends and help you get more into the game regardless of your rank or experience.

@@ -131,14 +131,15 @@ v0.4.5 _feat:patch notes component_ - 14 Dec 2021
 
 v0.4.6 _feat: handled SoloItem component render_ 14 Dec 2021
 
-
 v0.5.0 _feat: handled sessions_ 14 Dec 2021
 
 v0.5.1 _fix: modified items and champion browser components_ 15 Dec 2021
 
 v0.5.3 _refactor: modified apps routing_ 15 Dec 2021
 
-v0.5.4 _refactor: modified about us style_ 15 Dec 2021
+v0.5.4 _refactor: Adjusted styles for profile, solo, and dashbaord_ 15 Dec 2021
+
+v0.5.5 _refactor: modified about us style_ 15 Dec 2021
 ---
 
 ## Test Coverage

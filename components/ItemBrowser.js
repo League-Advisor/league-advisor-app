@@ -41,7 +41,7 @@ export default function ItemsBrowser() {
 
                     {itemsnumbers.map((item, idx) => {
                         return (
-                            <div className="flex justify-center mt-4 ml-6 duration-150 transform bg-gray-400 rounded-lg shadow-lg bg-opacity-30 hover:bg-gray-100 hoverbg-opacity-100 transision hover:-translate-y-2" key={idx}>
+                            <div className="flex justify-center mt-4 ml-10 duration-150 transform bg-gray-400 rounded-lg shadow-lg bg-opacity-30 hover:bg-gray-100 hoverbg-opacity-100 transision hover:-translate-y-2" key={idx}>
                                 <button onClick={() => { setShowModal(true); itemsinfo(item) }} className="m-2 bg-gray-500 rounded-lg shadow-2xl hover:bg-gray-700">
                                     <Image className="rounded-lg"
                                         src={`/static/images/item/${item}.png`}
@@ -55,10 +55,10 @@ export default function ItemsBrowser() {
                     })}
 
                     {showModal && iteminfo ? (<>
-                        <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none" >
-                            <div className="relative w-full max-w-2xl mx-auto my-6 mt-96 mb-36">
+                        <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none ml-80 focus:outline-none" >
+                            <div className="relative w-full max-w-2xl mx-auto my-4 mt-52 mb-36">
                                 {/*content*/}
-                                <div className="relative flex flex-col w-full bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none">
+                                <div className="relative flex flex-col w-full border-0 rounded-lg shadow-lg outline-none bg-white/90 focus:outline-none">
                                     {/*header*/}
                                     <div className="flex items-start justify-center p-5 border-b border-solid rounded-t border-blueGray-200">
                                         <h3 className="text-3xl font-semibold " >
@@ -75,17 +75,17 @@ export default function ItemsBrowser() {
                                         </button>
                                     </div>
                                     {/*body*/
-                                        <div className="block mx-auto mt-2 rounded-lg w-52 justify-conter">
+                                        <div className="flex justify-center mx-auto mt-2 rounded-lg w-52">
                                             <Image className="bg-gray-500 rounded-lg shadow-2xl"
                                                 src={iteminfo["image"]}
-                                                alt='universe'
-                                                width={64}
-                                                height={64}
+                                                alt={iteminfo["name"]}
+                                                width={84}
+                                                height={84}
                                             />
                                         </div>
                                     }
                                     <div className="relative flex-auto p-6 text-justify">
-                                        <p className="my-4 text-lg leading-relaxed text-blueGray-500">
+                                        <p className="my-4 text-xl font-semibold leading-relaxed text-blueGray-500 ">
                                             {iteminfo["description"]}
                                         </p>
                                     </div>
@@ -93,9 +93,9 @@ export default function ItemsBrowser() {
                                         {/* item gold */}
                                         <h2 className="font-bold">Gold:   ({iteminfo["gold"]})</h2>
                                     </div>
-                                    <div className="flex justify-center w-8/12 mx-auto border-t border-solid rounded-b border-blueGray-200">
-                                        {/* champion props */}
-                                        <p className="block font-bold">Tags:   {iteminfo["tags"].replace(/[\[\]']+/g, ' ')}</p>
+                                    <div className="flex justify-center w-8/12 mx-auto text-center border-t border-solid rounded-b border-blueGray-200">
+                                        {/* item props */}
+                                        <p className="block font-bold">Tags:  {iteminfo["tags"].replace(/[\[\]']+/g, ' ')}</p>
                                     </div>
                                     {/*footer*/}
                                     <div className="flex items-center justify-end p-6 border-t border-solid rounded-b border-blueGray-200">

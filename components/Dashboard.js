@@ -16,27 +16,31 @@ export default function Dashboard() {
                 <Navbar />
                 <div className="grid grid-cols-2 grid-rows-2 pt-16 z-1 gap-x-80">
 
-                    <div className="z-0 flex justify-center w-full h-48 mt-24 rounded-lg shadow-2xl ml-44 bg-white/50 text-black/50 hover:bg-white/75 hover:text-black/75 active:bg-white/25 active:text-black ">
-                        <button type="button" onClick={() => router.push('/championsbrowser')}>
-                            <a className="justify-center pt-16 font-sans text-5xl font-bold text-center text-black ">Champions Browser</a>
+                    <div className="z-0 flex justify-center w-full h-48 mt-24 rounded-lg shadow-2xl ml-28 bg-white/50 text-black/50 hover:bg-white/75 hover:text-black/75 active:bg-white/25 active:text-black ">
+                                             <button type="button" onClick={() => router.push('/championsbrowser')}>
+                            <a className="justify-center pt-16 font-sans text-5xl font-bold text-center ">Champions Browser</a>
+
                         </button>
                     </div>
 
                     <div className="flex justify-center w-full h-48 mt-24 rounded-lg bg-white/50 z-1 text-black/50 hover:bg-white/75 hover:text-black/75 active:bg-white/25 active:text-black">
-                        <button type="button" onClick={() => router.push('/itemsbrowser')}>
-                            <a className="justify-center pt-16 font-sans text-5xl font-bold text-center text-black ">Items Browser</a>
+                           <button type="button" onClick={() => router.push('/itemsbrowser')}>
+                            <a className="justify-center pt-16 font-sans text-5xl font-bold text-center ">Items Browser</a>
                         </button>
                     </div>
 
-                    <div className="flex justify-center w-full h-48 mt-24 text-white rounded-lg shadow-2xl ml-44 bg-white/50 z-1 text-black/50 hover:bg-white/75 hover:text-black/75 active:bg-white/25 active:text-black ">
-                        <button type="button" onClick={() => router.push('/solochampion')}>
-                            <a className="justify-center pt-16 font-sans text-5xl font-bold text-center text-black ">Solo Champion</a>
+                    <div className="flex justify-center w-full h-48 mt-24 text-white rounded-lg shadow-2xl ml-28 bg-white/50 z-1 text-black/50 hover:bg-white/75 hover:text-black/75 active:bg-white/25 active:text-black ">
+                                             <button type="button" onClick={() => router.push('/solochampion')}>
+                            <a className="justify-center pt-16 font-sans text-5xl font-bold text-center ">Solo Champion</a>
+
                         </button>
                     </div>
 
                     <div className="flex justify-center w-full h-48 mt-24 rounded-lg shadow-2xl bg-white/50 z-1 text-black/50 hover:bg-white/75 hover:text-black/75 active:bg-white/25 active:text-black ">
-                        <button type="button" onClick={() => router.push('/patchNotes')}>
-                            <a className="justify-center pt-16 font-sans text-5xl font-bold text-center text-black ">Patch Notes</a>
+
+                      <button type="button" onClick={() => router.push('/patchNotes')}>
+                            <a className="justify-center pt-16 font-sans text-5xl font-bold text-center ">Patch Notes</a>
+
                         </button>
 
                     </div>
