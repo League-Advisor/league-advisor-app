@@ -60,7 +60,7 @@ export default function ChampionsBrowser() {
 
                     {showModal && championData ? (<>
                         <div className="fixed inset-0 z-50 items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none" >
-                            <div className="relative w-auto max-w-2xl mx-auto mb-12 mt-72">
+                            <div className="relative w-auto max-w-2xl mx-auto mt-40 mb-12 left-40">
                                 {/*content*/}
                                 <div className="relative flex flex-col w-full border-0 rounded-lg shadow-2xl outline-none bg-white/90 focus:outline-none">
                                     {/*header*/}

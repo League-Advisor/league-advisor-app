@@ -80,7 +80,7 @@ export default function SoloChampion() {
 
         </div>
 
-        {build ?
+        {build && build.length >0 ?
           <div className="absolute z-50 flex top-96 w-fit left-80">
          
             <div className=" left-12">
@@ -116,9 +116,9 @@ export default function SoloChampion() {
           </div>
           :
           <div>
-            {/* <h1 className="text-xl leading-normal capitalize shadow-2xl z-1 font-lg text-blueGray-50">
+            <h1 className="z-0 text-xl leading-normal capitalize shadow-2xl z-1 font-lg text-blueGray-50">
               Please Enter a Valid Champion Name!
-            </h1>  */}
+            </h1> 
           </div>
         }
       </div>
