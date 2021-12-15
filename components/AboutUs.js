@@ -1,17 +1,17 @@
 import React from 'react'
 
-
-export default function AboutUsCards() {
+// className="w-8/12 h-screen px-4 py-12 mx-auto sm:px-6 lg:px-4"
+export default function AboutUs() {
     return (
-        <div className="flex items-center">
-            <section className="w-3/4 px-4 py-12 mx-auto sm:px-6 lg:px-4">
+        <div className="w-full bg-white ">
+            <section className="top-0 grid w-10/12 mt-24 ml-auto mr-auto ">
                 <div className="z-0 pb-12 text-center">
-                    <h1 className="text-3xl font-bold text-gray-900 md:text-4xl lg:text-5xl font-heading">
+                    <h1 className="font-mono font-bold text-gray-900 text-7xl font-heading">
                         Check our awesome team members
                     </h1>
                 </div>
 
-                <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+                <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
 
                     <div className="z-0 flex flex-col w-full overflow-hidden rounded-lg bg-gray-200/70 sahdow-lg md:flex-row">
                         <div className="w-full md:w-2/5 h-80">

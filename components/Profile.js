@@ -1,9 +1,11 @@
 import Image from "next/image";
 import championKeys from "../public/static/championKeys";
 import { useAuth } from "../contexts/auth"
+import { useRouter } from 'next/router'
 
 export default function Profile() {
-const { user } = useAuth();
+    const router = useRouter()
+    const { user } = useAuth();
     console.log(user);
     return (
 

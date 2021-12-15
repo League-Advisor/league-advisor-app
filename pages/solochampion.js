@@ -1,15 +1,18 @@
 import React from 'react'
-import Login from '../components/Login'
+import Navbar from '../components/Navbar'
 import Head from 'next/head'
+import SoloChampion from '../components/SoloChampion'
 
-export default function login() {
+export default function solochampion() {
     return (
-        <div >
+
+        <div className="flex">
             <Head>
                 <title>League Advisor</title>
                 <link rel="icon" href="/favicon.png" />
             </Head>
-            <Login />
+            <Navbar />
+            <SoloChampion />
         </div>
     )
 }

@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import Navbar from '../components/Navbar'
+import React from 'react'
 import Head from 'next/head'
-import Champion from '../components/championsbrowse';
+import ChampionsBrowser from '../components/ChampionsBrowser'
+import Navbar from '../components/Navbar'
 
-export default function champion() {
-
+export default function signup() {
     return (
         <div className="flex">
             <Head>
@@ -12,7 +11,7 @@ export default function champion() {
                 <link rel="icon" href="/favicon.png" />
             </Head>
             <Navbar />
-            <Champion />
+            <ChampionsBrowser />
 
         </div>
     )

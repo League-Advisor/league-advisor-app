@@ -1,6 +1,8 @@
-import Link from "next/link";
+import { useRouter } from 'next/router'
+
 
 export default function LoginForm({ login }) {
+    const router = useRouter()
     return (
 
         <div className="absolute flex w-full min-h-screen bg-gray-300">
@@ -55,9 +57,13 @@ export default function LoginForm({ login }) {
                             </p>
                             <br /><br />
                             <h4 className="text-xl font-bold">Not a member already?
-                                <Link href="#">
+
+
+                                <button type="button" onClick={() => router.push('/signup')}>
                                     <a className="text-blue-500 hover:text-red" > Sign up here!</a>
-                                </Link>
+                                </button>
+
+
                             </h4>
 
                         </div>
