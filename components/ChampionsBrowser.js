@@ -6,7 +6,7 @@ import championKeys from "../public/static/championKeys";
 
 const championUrl = process.env.NEXT_PUBLIC_CHAMPIONS_BROWSER_URL
 
-export default function Champion() {
+export default function ChampionsBrowser() {
     const [item, setitem] = useState("")
     const [showModal, setShowModal] = useState(false);
     const [championData, setchampionData] = useState(null);
@@ -15,9 +15,9 @@ export default function Champion() {
         let response = await axios.get(`${championUrl}${value}`)
 
         let resData = {
-            "key":response.data.key,
+            "key": response.data.key,
             "name": response.data.name,
-            "champion_id":response.data.champion_id,
+            "champion_id": response.data.champion_id,
             "title": response.data.title,
             "lore": response.data.lore,
             "attack": response.data.attack,
@@ -33,9 +33,8 @@ export default function Champion() {
     }
 
     const content_bg = {
-        // "background-image": "url('https://i.pinimg.com/originals/69/58/10/6958108311fb163d1f0b4f575dab67e4.gif')",
         "background-size": "cover",
-        // "border-radius": "10px"
+
     }
 
 
@@ -97,7 +96,7 @@ export default function Champion() {
                                     <div className="flex items-center justify-center w-8/12 mx-auto border-t border-solid rounded-b border-blueGray-200">
                                         {/* champion props */}
                                         <p className="items-center justify-center block mx-8 font-semibold">
-                                            Magic<br/>
+                                            Magic<br />
                                             <Image
                                                 src='/static/images/StatMods/StatModsAdaptiveForceIcon.png'
                                                 alt='Magic'
@@ -106,31 +105,31 @@ export default function Champion() {
                                             /><br />
                                             {championData["magic"]}/10 </p>
                                         <p className="items-center justify-center block mx-8 font-semibold">
-                                            Defense<br/>
+                                            Defense<br />
                                             <Image
                                                 src='/static/images/StatMods/StatModsArmorIcon.png'
                                                 alt='Defense'
                                                 width={32}
                                                 height={32}
-                                            /><br/>
+                                            /><br />
                                             {championData["defense"]}/10</p>
                                         <p className="items-center justify-center block mx-8 font-semibold">
-                                            Attack<br/>
+                                            Attack<br />
                                             <Image
                                                 src='/static/images/StatMods/StatModsAttackSpeedIcon.png'
                                                 alt='Attack'
                                                 width={32}
                                                 height={32}
-                                            /><br/>
+                                            /><br />
                                             {championData["attack"]}/10</p>
                                         <p className="items-center justify-center block mx-8 font-semibold">
-                                            Difficulty<br/>
+                                            Difficulty<br />
                                             <Image
                                                 src='/static/images/StatMods/StatModsHealthScalingIcon.png'
                                                 alt='Difficulty'
                                                 width={32}
                                                 height={32}
-                                            /><br/>
+                                            /><br />
                                             {championData["difficulty"]}/10</p>
                                     </div>
                                     <div className="flex items-center justify-center p-6 border-t border-solid rounded-b border-blueGray-200">

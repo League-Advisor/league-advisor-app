@@ -8,11 +8,11 @@ import Image from "next/image";
 
 const soloItemUrl = process.env.NEXT_PUBLIC_SOLO_ITEM_URL;
 
-export default function SoloItem() {
+export default function SoloChampion() {
   const [build, setBuild] = useState(null)
   const [champion, setChampion] = useState(null)
 
-  
+
   async function handelsearch(event) {
     event.preventDefault()
 
@@ -25,7 +25,7 @@ export default function SoloItem() {
     const response = await axios.get(`${soloItemUrl}${chName}`)
     const data = response.data[`${chName}`]
 
-    
+
 
     await setBuild(data)
 
@@ -40,15 +40,15 @@ export default function SoloItem() {
           className="flex w-full z-1 "
           style={{ width: "100%" }}
         >
-          <video
+          {/* <video
             playsInline
             autoPlay
             loop
             muted
             className="absolute w-full z-1 "
             layout="fill"
-            src="/Shurima-Crest.webm"
-          />
+            src="/Shurima.webm"
+          /> */}
 
           <div className="z-0 flex w-1/2 py-10">
 
@@ -82,28 +82,28 @@ export default function SoloItem() {
               </div>
             </form>
 
-            
+
 
           </div>
           {build ?
-              <div className="z-0 ">
-                <div className="absolute mt-20 bg-gray-200 rounded-lg shadow-2xl left-12 top-96">
+            <div className="z-0 ">
+              <div className="absolute mt-20 bg-gray-200 rounded-lg shadow-2xl left-12 top-96">
                 <h3 className="absolute z-0 text-5xl font-semibold text-white capitalize -top-14"> {champion}</h3>
 
-                  <Image
-                    src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion}_0.jpg`}
-                    width={606}
-                    height={358}
-                    className="z-0"
-                  />
-                </div>
+                <Image
+                  src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion}_0.jpg`}
+                  width={606}
+                  height={358}
+                  className="z-0"
+                />
+              </div>
 
-                <div className="absolute grid items-center justify-center max-w-4xl grid-cols-6 grid-rows-4 gap-6 text-white right-18 bottom-1 ">
-                  
-                  <h3 className="absolute z-0 text-5xl font-semibold text-white capitalize ml-80 -top-14"> Optimal Items</h3>
-                  {build.map(item => {
-                  
-                    return(
+              <div className="absolute grid items-center justify-center max-w-4xl grid-cols-6 grid-rows-4 gap-6 text-white right-18 bottom-1 ">
+
+                <h3 className="absolute z-0 text-5xl font-semibold text-white capitalize ml-80 -top-14"> Optimal Items</h3>
+                {build.map(item => {
+
+                  return (
                     <div className="z-0 ml-8 text-lg font-semibold w-26">
                       <h4 >{item}</h4>
                       <Image
@@ -113,17 +113,17 @@ export default function SoloItem() {
                         className="z-0 block pl-4"
                       />
                     </div>
-                    )
-                  })}
-                </div>
-
+                  )
+                })}
               </div>
-              : 
-              <div>
+
+            </div>
+            :
+            <div>
               <h1 className="text-xl leading-normal capitalize shadow-2xl z-1 font-lg text-blueGray-50">
                 Please Enter a Valid Champion Name!
               </h1> </div>
-              }
+          }
         </div>
       </div>
     </>

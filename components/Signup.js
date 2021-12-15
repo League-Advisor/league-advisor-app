@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-
+import { useRouter } from 'next/router'
 import axios from "axios";
 import { useAuth } from '../contexts/auth';
 
 export default function signup() {
-
+  const router = useRouter()
   const { user, login } = useAuth();
 
   const registrationUrl = process.env.NEXT_PUBLIC_REGISTRATION_URL
@@ -32,9 +32,13 @@ export default function signup() {
     //   alert(response.data["message"])
     // }
 
-    if (response.data){
+    if (response.data) {
       await login(event.target.username.value, event.target.password1.value)
       console.log(user);
+
+    }
+    if (user.data) {
+      router.push('/')
     }
   }
 
@@ -95,7 +99,7 @@ export default function signup() {
 
               <div className="py-5">
                 <label className="py-10 text-xl font-medium" htmlFor="summoner_name" >
-                  Summoner name
+                  Summoner Name
                 </label>
                 <input
                   id="summoner_name"
@@ -109,7 +113,7 @@ export default function signup() {
 
               <div className="py-5">
                 <label className="py-10 text-xl font-medium" htmlFor="summoner_server" >
-                  Summoner name
+                  Summoner Server
                 </label>
                 <select
                   id="summoner_server"

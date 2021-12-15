@@ -5,7 +5,7 @@ import PatchNotes from '../components/PatchNotes'
 
 export default function patchNotes() {
     return (
-        <div>
+        <div className="flex">
             <Head>
                 <title>League Advisor</title>
                 <link rel="icon" href="/favicon.png" />

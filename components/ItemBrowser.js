@@ -4,11 +4,11 @@ import Image from "next/image";
 import axios from 'axios'
 
 
-export default function Items() {
+
+export default function ItemsBrowser() {
     const [showModal, setShowModal] = useState(false);
     const [iteminfo, setiteminfo] = useState(null);
-    const itemUrl =   process.env.NEXT_PUBLIC_ITEMS_BROWSER_URL
-
+    const itemUrl = process.env.NEXT_PUBLIC_ITEMS_BROWSER_URL
 
     async function itemsinfo(value) {
         let response = await axios.get(`${itemUrl}${value}`)
@@ -26,9 +26,9 @@ export default function Items() {
     }
 
     const content_bg = {
-        // "background-image": "url('https://i.pinimg.com/originals/69/58/10/6958108311fb163d1f0b4f575dab67e4.gif')",
+
         "background-size": "cover",
-        // "border-radius": "10px"
+
 
     }
 
