@@ -140,6 +140,9 @@ v0.5.3 _refactor: modified apps routing_ 15 Dec 2021
 v0.5.4 _refactor: Adjusted styles for profile, solo, and dashbaord_ 15 Dec 2021
 
 v0.5.5 _refactor: modified about us style_ 15 Dec 2021
+
+v0.5.6 _feat: added patch notes component style_ 15 Dec 2021
+
 ---
 
 ## Test Coverage
