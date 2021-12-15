@@ -1,8 +1,18 @@
 import Image from "next/image";
 import championKeys from "../public/static/championKeys";
+import { useState } from "react";
+import axios from "axios";
 
 export default function Profile({ user }) {
 
+    const [userProfile, setUserProfile] = useState( user )
+    const updateProfileUrl = process.env.NEXT_PUBLIC_PROFILE_UPDATE_URL;
+    
+    async function updateProfile(event) {
+        event.preventDefault();
+        const response = await axios.get(`${updateProfileUrl}?user=${user.username}`, )
+        setUserProfile(response.data)
+    }
     return (
 
         <>
@@ -12,13 +22,13 @@ export default function Profile({ user }) {
                     <div className="px-4 py-3 mb-0 border-0 rounded-t">
                         <div className="flex flex-wrap items-center">
                             <div className="relative flex-1 flex-grow w-full max-w-full px-4 ">
-                                <h2 className="py-10 text-5xl font-semibold text-white">{user.summoner_name} Profile</h2>
+                                <h2 className="py-10 text-5xl font-semibold text-white">{userProfile.summoner_name} Profile</h2>
                                 <div className="flex flex-col items-center p-10 mb-10 text-center border-4 rounded-3xl">
 
                                     <div className="py-10 ">
                                         <div class="w-48 h-48 bg-white rounded-full ">
                                             <Image
-                                                src={user.profile_icon}
+                                                src={userProfile.profile_icon}
                                                 width='500'
                                                 height='500'
                                                 objectFit="contain"
@@ -29,15 +39,15 @@ export default function Profile({ user }) {
                                     <div className="py-10">
 
                                         <div className="text-3xl font-bold">
-                                            <h2>{user.summoner_name}</h2>
+                                            <h2>{userProfile.summoner_name}</h2>
                                         </div>
 
                                         <div className="text-xl font-medium ">
-                                            <h2>Level {user.summoner_level}</h2>
+                                            <h2>Level {userProfile.summoner_level}</h2>
                                         </div>
 
                                         <div className="text-xl font-medium ">
-                                            <h2>{user.summoner_server.toUpperCase().replace(/[0-9]/g, '')}</h2>
+                                            <h2>{userProfile.summoner_server.toUpperCase().replace(/[0-9]/g, '')}</h2>
                                         </div>
                                     </div>
 
@@ -45,9 +55,9 @@ export default function Profile({ user }) {
 
                                         <div className="flex ">
 
-                                            {user.summoner_rank.length > 0 ?
+                                            {userProfile.summoner_rank.length > 0 ?
 
-                                                user.summoner_rank.map(queue =>
+                                                userProfile.summoner_rank.map(queue =>
                                                     <div className="px-20 text-xl">
                                                         <Image
                                                             src={`/static/images/tier-icons/tier-icons/${queue.tier.toLowerCase()}_${queue.rank.toLowerCase()}.png`}
@@ -74,7 +84,7 @@ export default function Profile({ user }) {
                                     <div className="py-10">
 
                                         <div className="flex">
-                                            {user.summoner_champion_mastery.map(champion =>
+                                            {userProfile.summoner_champion_mastery.map(champion =>
                                                 <div className="w-1/3 px-20">
                                                     <div className="rounded-full">
                                                         <Image
@@ -104,8 +114,9 @@ export default function Profile({ user }) {
                                     </div>
 
 
-                                    <div className="p-2 bg-gray-800 rounded-lg tems-center">
-                                            <h4 className="text-2xl font-bold">Match History</h4>
+                                    <button className="px-10 py-4 my-5 text-xl font-semibold text-white border-2 rounded-3xl hover:text-pink-700 hover:bg-white/50 hover:border-white/50 active:bg-white active:text-pink-900" onClick={() => {updateProfile(event)}}>UPDATE</button>
+                                    <div className="p-2 mt-5 bg-gray-800 rounded-lg tems-center">
+                                        <h4 className="text-2xl font-bold">Match History</h4>
                                         <div className="overflow-hidden ">
                                             <table className="w-full py-8 ">
                                                 <thead className="">
@@ -117,7 +128,7 @@ export default function Profile({ user }) {
                                                         <th className="p-4 " >Duration</th>
                                                         <th className="p-4 " >Game Mode</th>
 
-                                                        <th className="p-4 " >{user.summoner_name}</th>
+                                                        <th className="p-4 " >{userProfile.summoner_name}</th>
                                                         <th className="p-4 " >K/D/A</th>
                                                         <th className="p-4 " >Items</th>
 
@@ -128,9 +139,9 @@ export default function Profile({ user }) {
                                                 </thead>
 
                                                 <tbody>
-                                                    {user.summoner_match_history.map(match =>
+                                                    {userProfile.summoner_match_history.map(match =>
                                                         <tr key={match["metadata"]["matchId"]} className="odd:bg-gray-700 even:bg-gray-500 " >
-                                                            <td className="ml-2 text-lg border-r border-gray-800" > {user.summoner_match_history.indexOf(match) + 1}</td>
+                                                            <td className="ml-2 text-lg border-r border-gray-800" > {userProfile.summoner_match_history.indexOf(match) + 1}</td>
                                                             <td className="ml-2 text-lg border-r border-gray-800" > {new Date(match["info"]["gameCreation"]).toLocaleDateString("en-GB")}</td>
                                                             <td className="ml-2 text-lg border-r border-gray-800" > {new Date(match["info"]["gameCreation"]).toLocaleTimeString("en-US")}</td>
 
@@ -138,7 +149,7 @@ export default function Profile({ user }) {
                                                             <td className="ml-2 text-lg border-r border-gray-800" > {match["info"]["gameMode"]}</td>
 
                                                             {match["info"]["participants"].map(player =>
-                                                                player["summonerName"] == user.summoner_name ?
+                                                                player["summonerName"] == userProfile.summoner_name ?
                                                                     <>
                                                                         <td className="py-2 text-lg border-r border-gray-800">
 
@@ -244,7 +255,7 @@ export default function Profile({ user }) {
                                                                 {
                                                                     match["info"]["participants"].map(player =>
 
-                                                                        player["summonerName"] == user.summoner_name ? (player["win"] ? <p className="font-bold text-cyan-500">VICTORY</p> : <p className="font-bold text-red-500">DEFEAT</p>) : <></>
+                                                                        player["summonerName"] == userProfile.summoner_name ? (player["win"] ? <p className="font-bold text-cyan-500">VICTORY</p> : <p className="font-bold text-red-500">DEFEAT</p>) : <></>
                                                                     )}
                                                             </td>
 
