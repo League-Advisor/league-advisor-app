@@ -1,16 +1,28 @@
-import React from 'react'
-import axios from 'axios'
+import axios from "axios";
+
+import { useState } from "react";
 
 export default function PatchNotes() {
-    async function fetchdata() {
-        const url = "http://127.0.0.1:8000/patch-notes/"
-        const data = await axios.get(url)
-        console.log(data)
-        return data
+    const [test, setTest] = useState(null)
+
+    async function getData() {
+        const response = await axios.get('http://127.0.0.1:8000/patch-notes/')
+        setTest(response.data)
+        console.log(response.data);
+
     }
-    const htmlresponse = fetchdata()
+    getData()
+
 
     return (
-        // <div dangerouslySetInnerHTML={{ __html: htmlresponse }} />
+
+        <>
+            {
+                test ?
+                    <div>
+                        < div dangerouslySetInnerHTML={{ __html: test.replace("/n", "") }} />
+                    </div > : <> </>}
+        </>
+
     )
 }

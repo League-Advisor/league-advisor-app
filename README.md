@@ -127,7 +127,10 @@ v0.4.3 _feat:edit css for apps_ - 14 Dec 2021
 
 v0.4.4 _feat:edit css for dashboard ,champions and items_ - 14 Dec 2021
 
-v0.4.7 _feat: handled SoloItem component render_ 14 Dec 2021
+v0.4.5 _feat:patch notes component_ - 14 Dec 2021
+
+v0.4.6 _feat: handled SoloItem component render_ 14 Dec 2021
+
 
 ---
 
