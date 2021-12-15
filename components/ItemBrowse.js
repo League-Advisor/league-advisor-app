@@ -7,9 +7,10 @@ import axios from 'axios'
 export default function Items() {
     const [showModal, setShowModal] = useState(false);
     const [iteminfo, setiteminfo] = useState(null);
+    const itemUrl =   process.env.NEXT_PUBLIC_ITEMS_BROWSER_URL
+
 
     async function itemsinfo(value) {
-        const itemUrl = `http://127.0.0.1:8000/items/`
         let response = await axios.get(`${itemUrl}${value}`)
 
         let resData = {
@@ -45,8 +46,8 @@ export default function Items() {
                                     <Image className="rounded-lg"
                                         src={`/static/images/item/${item}.png`}
                                         alt='universe'
-                                        width={150}
-                                        height={150}
+                                        width={80}
+                                        height={80}
                                     />
                                 </button>
                             </div>
@@ -78,8 +79,8 @@ export default function Items() {
                                             <Image className="bg-gray-500 rounded-lg shadow-2xl"
                                                 src={iteminfo["image"]}
                                                 alt='universe'
-                                                width={160}
-                                                height={170}
+                                                width={64}
+                                                height={64}
                                             />
                                         </div>
                                     }
@@ -94,7 +95,7 @@ export default function Items() {
                                     </div>
                                     <div className="flex justify-center w-8/12 mx-auto border-t border-solid rounded-b border-blueGray-200">
                                         {/* champion props */}
-                                        <p className="block font-bold">Tags:   {iteminfo["tags"]}</p>
+                                        <p className="block font-bold">Tags:   {iteminfo["tags"].replace(/[\[\]']+/g, ' ')}</p>
                                     </div>
                                     {/*footer*/}
                                     <div className="flex items-center justify-end p-6 border-t border-solid rounded-b border-blueGray-200">
