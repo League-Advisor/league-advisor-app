@@ -23,5 +23,6 @@ export default function PatchNotes() {
                         < div dangerouslySetInnerHTML={{ __html: test.replace("/n", "") }} />
                     </div > : <> </>}
         </>
+
     )
 }
