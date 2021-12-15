@@ -18,7 +18,7 @@ export default function LoginForm({ login }) {
                         <div className="px-5 py-5" >
 
                             <div className="items-start py-5 ">
-                                <label className="z-0 block w-1/3 my-2 mt-5 text-xl font-bold tracking-wide text-white " for="userName">
+                                <label className="z-0 block w-1/3 my-2 mt-5 text-xl font-bold tracking-wide text-white " htmlFor="userName">
                                     username
                                 </label>
                             </div>
@@ -27,7 +27,7 @@ export default function LoginForm({ login }) {
                             </div>
 
                             <div className="items-start py-5 pl-5">
-                                <label className="z-0 block w-1/3 my-2 mt-5 text-xl font-bold tracking-wide text-white " for="password">
+                                <label className="z-0 block w-1/3 my-2 mt-5 text-xl font-bold tracking-wide text-white " htmlFor="password">
                                     password
                                 </label>
                             </div>

@@ -68,7 +68,7 @@ export default function signup() {
 
 
               <div className="py-5">
-                <label className="py-10 text-xl font-medium" for="username" >
+                <label className="py-10 text-xl font-medium" htmlFor="username" >
                   Username
                 </label>
                 <input
@@ -83,7 +83,7 @@ export default function signup() {
 
 
               <div className="py-5">
-                <label className="py-10 text-xl font-medium" className="py-10 text-xl font-medium" for="email">Email</label>
+                <label className="py-10 text-xl font-medium" className="py-10 text-xl font-medium" htmlFor="email">Email</label>
 
                 <input
                   id="email"
@@ -98,7 +98,7 @@ export default function signup() {
               </div>
 
               <div className="py-5">
-                <label className="py-10 text-xl font-medium" for="summoner_name" >
+                <label className="py-10 text-xl font-medium" htmlFor="summoner_name" >
                   Summoner Name
                 </label>
                 <input
@@ -112,7 +112,7 @@ export default function signup() {
               </div>
 
               <div className="py-5">
-                <label className="py-10 text-xl font-medium" for="summoner_server" >
+                <label className="py-10 text-xl font-medium" htmlFor="summoner_server" >
                   Summoner Server
                 </label>
                 <select
@@ -139,7 +139,7 @@ export default function signup() {
               </div>
 
               <div className="py-5">
-                <label className="py-10 text-xl font-medium" for="password1" >
+                <label className="py-10 text-xl font-medium" htmlFor="password1" >
                   Password
                 </label>
                 <input
@@ -154,7 +154,7 @@ export default function signup() {
               </div>
 
               <div className="py-5">
-                <label className="py-10 text-xl font-medium" for="password2" >
+                <label className="py-10 text-xl font-medium" htmlFor="password2" >
                   Confirm Password
                 </label>
                 <input
