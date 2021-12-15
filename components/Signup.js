@@ -68,7 +68,7 @@ export default function signup() {
 
 
               <div className="py-5">
-                <label className="py-10 text-xl font-medium" htmlFor="username" >
+                <label className="py-10 text-xl font-medium" for="username" >
                   Username
                 </label>
                 <input
@@ -98,7 +98,7 @@ export default function signup() {
               </div>
 
               <div className="py-5">
-                <label className="py-10 text-xl font-medium" htmlFor="summoner_name" >
+                <label className="py-10 text-xl font-medium" for="summoner_name" >
                   Summoner Name
                 </label>
                 <input
@@ -112,7 +112,7 @@ export default function signup() {
               </div>
 
               <div className="py-5">
-                <label className="py-10 text-xl font-medium" htmlFor="summoner_server" >
+                <label className="py-10 text-xl font-medium" for="summoner_server" >
                   Summoner Server
                 </label>
                 <select
@@ -139,7 +139,7 @@ export default function signup() {
               </div>
 
               <div className="py-5">
-                <label className="py-10 text-xl font-medium" htmlFor="password1" >
+                <label className="py-10 text-xl font-medium" for="password1" >
                   Password
                 </label>
                 <input
@@ -154,7 +154,7 @@ export default function signup() {
               </div>
 
               <div className="py-5">
-                <label className="py-10 text-xl font-medium" htmlFor="password2" >
+                <label className="py-10 text-xl font-medium" for="password2" >
                   Confirm Password
                 </label>
                 <input

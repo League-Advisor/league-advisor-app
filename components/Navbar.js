@@ -20,48 +20,48 @@ export default function Navbar() {
                     <div className="pl-10">
                         <ul className="pt-8 space-y-12">
                             {/* Profile */}
-                            <li className="flex items-center space-x-4 text-2xl font-bold text-white cursor-pointer hover:text-blue-600">
+                            <li className="flex items-center space-x-4 text-3xl text-white cursor-pointer hover:text-blue-600">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
                                 </svg>
 
-                                <button type="button" onClick={() => router.push('/profile')}>
+                                <button  className = "font-bold" type="button" onClick={() => router.push('/profile')}>
                                     Profile
                                 </button>
                             </li>
                             {/* Dashboard */}
-                            <li className="flex items-center space-x-4 text-2xl font-bold text-white cursor-pointer hover:text-blue-600">
+                            <li className="flex items-center space-x-4 text-3xl text-white cursor-pointer hover:text-blue-600">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 " fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
                                 </svg>
 
-                                <button type="button" onClick={() => router.push('/')}>
+                                <button  className = "font-bold" type="button" onClick={() => router.push('/')}>
                                     Dashboard
                                 </button>
                             </li>
                             {/* About Us */}
-                            <li className="flex items-center space-x-4 text-2xl font-bold text-white cursor-pointer hover:text-blue-600">
+                            <li className="flex items-center space-x-4 text-3xl text-white cursor-pointer hover:text-blue-600">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
                                 </svg>
 
-                                <button type="button" onClick={() => router.push('/aboutus')}>
+                                <button  className = "font-bold" type="button" onClick={() => router.push('/aboutus')}>
                                     About Us
                                 </button>
                             </li>
                             {/* Logout */}
-                            <li className="flex items-center space-x-4 text-2xl font-bold text-white cursor-pointer hover:text-blue-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <li className="flex items-center space-x-4 text-3xl text-white cursor-pointer hover:text-blue-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 font-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                                 </svg>
-                                <Link href="/" onClick={logout}>
+                                <Link  href="/" onClick={logout}>
                                     Logout
                                 </Link>
                                 {/* <button type="button" onClick={logout, router.push('/')}>

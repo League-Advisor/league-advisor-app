@@ -35,96 +35,92 @@ export default function SoloChampion() {
   }
   return (
     <>
-      <div className="flex w-full h-screen">
-        <div
-          className="flex w-full z-1 "
-          style={{ width: "100%" }}
-        >
-          {/* <video
+      <div className="grid w-screen h-screen bg-black grid-col-2 grid-row-2 ">
+
+          <video
             playsInline
             autoPlay
             loop
             muted
-            className="absolute w-full z-1 "
+            className="block w-screen h-full z-3"
             layout="fill"
             src="/Shurima.webm"
-          /> */}
+          />
 
-          <div className="z-0 flex w-1/2 py-10">
+        <div className="absolute z-0 flex w-10/12">
 
-            {/* //////////////////// */}
-            <form className="z-0 " onSubmit={(event) => handelsearch(event)}>
-              <h1 className="z-0 block w-full pl-10 my-2 mt-5 text-4xl font-bold text-white ">Recommended Items</h1>
-              <div className="items-start py-5 pl-5">
+          <form className="z-0 h-24" onSubmit={(event) => handelsearch(event)}>
+            <h1 className="z-0 block w-full pl-10 my-2 mt-5 text-4xl font-bold text-white ">Recommended Items</h1>
+            <div className="items-start py-5 pl-5">
 
 
-                <label
-                  className="z-0 block w-full py-10 my-2 mt-5 text-xl font-bold tracking-wide text-white ">
-                  <h2 className="w-full mt-0 mb-2 ml-4 text-xl leading-normal capitalize shadow-2xl font-lg text-blueGray-50">
-                    Enter your champion name to get the recommended build!
-                  </h2>
-                </label>
+              <label
+                className="z-0 block w-full py-10 my-2 mt-5 text-xl font-bold tracking-wide text-white ">
+                <h2 className="w-full mt-0 mb-2 ml-4 text-xl leading-normal capitalize shadow-2xl font-lg text-blueGray-50">
+                  Enter your champion name to get the recommended build!
+                </h2>
+              </label>
+            </div>
+            <div className="z-0 inline-flex w-full px-10">
+              <input
+                className="z-0 block w-full px-20 py-4 leading-tight text-gray-700 border border-gray-200 border-solid rounded-l-lg appearance-none bg-white/90 focus:outline-none focus:bg-white focus:border-gray-200 "
+                id="championname"
+                type="text"
+                name="championname"
+                placeholder="champion name"
+                required
+              />
+              <div className="flex w-full z-1">
+                <button className="justify-center w-32 bg-yellow-300 rounded-r-lg z-1" type="submit">
+                  <Icon icon="fluent:database-search-24-regular" className="w-full text-5xl font-lg " />
+                </button>
               </div>
-              <div className="inline-flex w-full px-10">
-                <input
-                  className="z-0 block w-full px-20 py-4 leading-tight text-gray-700 border border-gray-200 border-solid rounded-l-lg appearance-none bg-white/90 focus:outline-none focus:bg-white focus:border-gray-200 "
-                  id="championname"
-                  type="text"
-                  name="championname"
-                  placeholder="champion name"
-                  required
-                />
-                <div className="flex w-full z-1">
-                  <button className="justify-center w-32 bg-yellow-300 rounded-r-lg z-1" type="submit">
-                    <Icon icon="fluent:database-search-24-regular" className="w-full text-5xl font-lg " />
-                  </button>
-                </div>
-              </div>
-            </form>
+            </div>
+          </form>
 
+        </div>
 
+        {build ?
+          <div className="absolute z-50 flex top-96 w-fit left-80">
+         
+            <div className=" left-12">
+              <h3 className="z-0 pb-10 text-5xl font-semibold text-white capitalize "> {champion}</h3>
+
+              <Image
+                src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion}_0.jpg`}
+                width={606}
+                height={358}
+                className="z-0 bg-gray-200 rounded-lg shadow-2xl"
+              />
+            </div>
+
+            <div className="relative inset-x-0 grid justify-between max-w-4xl grid-cols-4 grid-rows-4 gap-2 text-white bottom-40 left-60">
+
+              <h3 className="absolute z-0 ml-64 text-5xl font-semibold text-white capitalize w-96 -top-32 right-48"> Optimal Items</h3>
+              {build.map(item => {
+
+                return (
+                  <div className="z-0 text-lg font-semibold left-60 max-w-26">
+                    <h4 >{item}</h4>
+                    <Image
+                      src={`/static/images/item/${itemKeys[item]}.png`}
+                      width={75}
+                      height={75}
+                      className="z-0 flex"
+                    />
+                  </div>
+                )
+              })}
+            </div>
 
           </div>
-          {build ?
-            <div className="z-0 ">
-              <div className="absolute mt-20 bg-gray-200 rounded-lg shadow-2xl left-12 top-96">
-                <h3 className="absolute z-0 text-5xl font-semibold text-white capitalize -top-14"> {champion}</h3>
-
-                <Image
-                  src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion}_0.jpg`}
-                  width={606}
-                  height={358}
-                  className="z-0"
-                />
-              </div>
-
-              <div className="absolute grid items-center justify-center max-w-4xl grid-cols-6 grid-rows-4 gap-6 text-white right-18 bottom-1 ">
-
-                <h3 className="absolute z-0 text-5xl font-semibold text-white capitalize ml-80 -top-14"> Optimal Items</h3>
-                {build.map(item => {
-
-                  return (
-                    <div className="z-0 ml-8 text-lg font-semibold w-26">
-                      <h4 >{item}</h4>
-                      <Image
-                        src={`/static/images/item/${itemKeys[item]}.png`}
-                        width={75}
-                        height={75}
-                        className="z-0 block pl-4"
-                      />
-                    </div>
-                  )
-                })}
-              </div>
-
-            </div>
-            :
-            <div>
-              <h1 className="text-xl leading-normal capitalize shadow-2xl z-1 font-lg text-blueGray-50">
-                Please Enter a Valid Champion Name!
-              </h1> </div>
-          }
-        </div>
+          :
+          <div>
+            {/* <h1 className="text-xl leading-normal capitalize shadow-2xl z-1 font-lg text-blueGray-50">
+              Please Enter a Valid Champion Name!
+            </h1>  */}
+          </div>
+        }
       </div>
     </>
   );
