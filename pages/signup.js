@@ -1,15 +1,18 @@
 import React from 'react'
-import Signup from '../components/Signup'
 import Head from 'next/head'
+import Signup from '../components/Signup'
 
 export default function signup() {
     return (
-        <div >
+        <div className="flex flex-col items-center justify-center min-h-screen py-2">
             <Head>
-                <title>League Advisor</title>
+                <title>Create Next App</title>
                 <link rel="icon" href="/favicon.png" />
             </Head>
-            <Signup />
+
+            <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
+                <Signup />
+            </main>
         </div>
     )
 }

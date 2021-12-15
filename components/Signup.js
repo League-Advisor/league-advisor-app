@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-
+import { useRouter } from 'next/router'
 import axios from "axios";
 import { useAuth } from '../contexts/auth';
 
 export default function signup() {
-
+  const router = useRouter()
   const { user, login } = useAuth();
 
   const registrationUrl = process.env.NEXT_PUBLIC_REGISTRATION_URL
@@ -32,9 +32,13 @@ export default function signup() {
     //   alert(response.data["message"])
     // }
 
-    if (response.data){
+    if (response.data) {
       await login(event.target.username.value, event.target.password1.value)
       console.log(user);
+
+    }
+    if (user.data) {
+      router.push('/')
     }
   }
 
@@ -64,7 +68,7 @@ export default function signup() {
 
 
               <div className="py-5">
-                <label className="py-10 text-xl font-medium" htmlFor="username" >
+                <label className="py-10 text-xl font-medium" for="username" >
                   Username
                 </label>
                 <input
@@ -94,8 +98,8 @@ export default function signup() {
               </div>
 
               <div className="py-5">
-                <label className="py-10 text-xl font-medium" htmlFor="summoner_name" >
-                  Summoner name
+                <label className="py-10 text-xl font-medium" for="summoner_name" >
+                  Summoner Name
                 </label>
                 <input
                   id="summoner_name"
@@ -108,8 +112,8 @@ export default function signup() {
               </div>
 
               <div className="py-5">
-                <label className="py-10 text-xl font-medium" htmlFor="summoner_server" >
-                  Summoner name
+                <label className="py-10 text-xl font-medium" for="summoner_server" >
+                  Summoner Server
                 </label>
                 <select
                   id="summoner_server"
@@ -135,7 +139,7 @@ export default function signup() {
               </div>
 
               <div className="py-5">
-                <label className="py-10 text-xl font-medium" htmlFor="password1" >
+                <label className="py-10 text-xl font-medium" for="password1" >
                   Password
                 </label>
                 <input
@@ -150,7 +154,7 @@ export default function signup() {
               </div>
 
               <div className="py-5">
-                <label className="py-10 text-xl font-medium" htmlFor="password2" >
+                <label className="py-10 text-xl font-medium" for="password2" >
                   Confirm Password
                 </label>
                 <input
