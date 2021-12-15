@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { championnamse } from '../public/static/data'
 import Image from "next/image";
 import axios from 'axios'
+import championKeys from "../public/static/championKeys";
+
+const championUrl = process.env.NEXT_PUBLIC_CHAMPIONS_BROWSER_URL
 
 export default function Champion() {
     const [item, setitem] = useState("")
@@ -9,16 +12,18 @@ export default function Champion() {
     const [championData, setchampionData] = useState(null);
 
     async function championdatainfo(value) {
-        const championUrl = `http://127.0.0.1:8000/champions/`
         let response = await axios.get(`${championUrl}${value}`)
 
         let resData = {
+            "key":response.data.key,
             "name": response.data.name,
+            "champion_id":response.data.champion_id,
             "title": response.data.title,
             "lore": response.data.lore,
             "attack": response.data.attack,
             "defense": response.data.defense,
             "magic": response.data.magic,
+            "difficulty": response.data.difficulty,
             "image": response.data.image,
             "tags": response.data.tags,
             "skills": response.data.skills
@@ -77,10 +82,10 @@ export default function Champion() {
                                     {/*body*/
                                         <div className="block mx-auto mt-2 bg-gray-500 rounded-lg shadow-2xl w-62 justify-conter">
                                             <Image className="bg-gray-500 rounded-lg shadow-2xl"
-                                                src={`${championData["image"]}`}
-                                                alt='league champions'
+                                                src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${championKeys[championData["key"]]}_0.jpg`}
+                                                alt={`${championData["name"]}`}
                                                 width={308}
-                                                height={380}
+                                                height={560}
                                             />
                                         </div>
                                     }
@@ -89,17 +94,50 @@ export default function Champion() {
                                             {championData["lore"]}
                                         </p>
                                     </div>
-                                    <div className="flex w-8/12 mx-auto border-t border-solid rounded-b border-blueGray-200">
+                                    <div className="flex items-center justify-center w-8/12 mx-auto border-t border-solid rounded-b border-blueGray-200">
                                         {/* champion props */}
-                                        <p className="block ml-20 font-semibold">Magic: {championData["magic"]}</p>
-                                        <p className="block ml-12 font-semibold ">Defense: {championData["defense"]}</p>
-                                        <p className="block ml-12 font-semibold ">Attack: {championData["attack"]}</p>
+                                        <p className="items-center justify-center block mx-8 font-semibold">
+                                            Magic<br/>
+                                            <Image
+                                                src='/static/images/StatMods/StatModsAdaptiveForceIcon.png'
+                                                alt='Magic'
+                                                width={32}
+                                                height={32}
+                                            /><br />
+                                            {championData["magic"]}/10 </p>
+                                        <p className="items-center justify-center block mx-8 font-semibold">
+                                            Defense<br/>
+                                            <Image
+                                                src='/static/images/StatMods/StatModsArmorIcon.png'
+                                                alt='Defense'
+                                                width={32}
+                                                height={32}
+                                            /><br/>
+                                            {championData["defense"]}/10</p>
+                                        <p className="items-center justify-center block mx-8 font-semibold">
+                                            Attack<br/>
+                                            <Image
+                                                src='/static/images/StatMods/StatModsAttackSpeedIcon.png'
+                                                alt='Attack'
+                                                width={32}
+                                                height={32}
+                                            /><br/>
+                                            {championData["attack"]}/10</p>
+                                        <p className="items-center justify-center block mx-8 font-semibold">
+                                            Difficulty<br/>
+                                            <Image
+                                                src='/static/images/StatMods/StatModsHealthScalingIcon.png'
+                                                alt='Difficulty'
+                                                width={32}
+                                                height={32}
+                                            /><br/>
+                                            {championData["difficulty"]}/10</p>
                                     </div>
                                     <div className="flex items-center justify-center p-6 border-t border-solid rounded-b border-blueGray-200">
                                         {/* champion tags */}
-                                        <h2 className="font-bold">Tags</h2>
+                                        <h2 className="font-bold">Tags: </h2>
                                         <br />
-                                        <p>{championData["tags"]}</p>
+                                        <p> {championData["tags"].replace(/[\[\]']+/g, ' ')}</p>
                                     </div>
                                     {/*footer*/}
                                     <div className="flex items-center justify-end p-6 border-t border-solid rounded-b border-blueGray-200">
