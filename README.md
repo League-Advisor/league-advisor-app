@@ -151,7 +151,9 @@ v0.5.9 _test: added more tests_ 16 Dec 2021
 
 v0.6.0 _test: added snapshots tests_ 16 Dec 2021
 
----
+v0.6.1 _test: added front aboutus component tests_ 16 Dec 2021
+
+v0.6.2 _test: added front dashboard and navbar components tests_ 16 Dec 2021---
 
 ## Test Coverage
 
