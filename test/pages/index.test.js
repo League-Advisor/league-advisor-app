@@ -1,7 +1,20 @@
-import React from "react";
-import { render, screen } from "../test-utils";
-import HomePage from "../../pages/index";
-import "@testing-library/jest-dom";
+import { render } from '@testing-library/react'
+import '@testing-library/jest-dom'
+
+const Providers = ({ children }) => {
+    return children;
+};
+
+const customRender = (ui, options = {}) =>
+    render(ui, { wrapper: Providers, ...options });
+
+// re-export everything
+export * from "@testing-library/react";
+
+// override render method
+export { customRender as render };
+
+
 
 // @jest-environment
 

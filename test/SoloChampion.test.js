@@ -53,23 +53,6 @@ describe("SoloChampion", () => {
 
 
 
-// describe("SoloChampionSearch", () => {
-//     it("should allow me to search", () => {
-
-//         render(<AuthProvider><SoloChampion /></AuthProvider>);
-  
-//       fireEvent.change(screen.getByText(/championname/i), {
-//         target: { value: 'lucian' },
-//       })
-
-//       fireEvent.click(screen.getByDisplayValue(/login/i))  
-
-//       expect(username.value).toEqual('username');
-//       expect(password.value).toEqual('password');
-  
-//     });
-//   });
-
 import renderer from 'react-test-renderer';
 
 

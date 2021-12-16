@@ -55,7 +55,7 @@ exports[`Login renders correctly 1`] = `
             className="px-10"
           >
             <input
-              className="z-0 block w-full px-4 py-4 leading-tight text-gray-700 border border-gray-200 border-solid rounded appearance-none bg-white/90 focus:outline-none focus:bg-white focus:border-gray-200 "
+              className="z-0 block w-full px-4 py-4 leading-tight text-gray-700 border border-gray-200 border-solid rounded appearance-none bg-white/80 focus:outline-none focus:bg-white focus:border-gray-200 "
               id="userName"
               placeholder="username"
               required={true}
@@ -63,7 +63,7 @@ exports[`Login renders correctly 1`] = `
             />
           </div>
           <div
-            className="items-start py-5 pl-5"
+            className="items-start py-5 "
           >
             <label
               className="z-0 block w-1/3 my-2 mt-5 text-xl font-bold tracking-wide text-white "
@@ -87,7 +87,7 @@ exports[`Login renders correctly 1`] = `
             className="z-0 px-10 py-20"
           >
             <input
-              className="block w-full px-4 py-4 text-xl font-bold leading-tight text-gray-800 transition bg-white rounded hover:bg-gray-300 active:bg-gray-500"
+              className="block w-full px-4 py-6 text-2xl font-bold leading-tight text-gray-800 transition rounded bg-white/90 hover:bg-gray-300/90 active:bg-gray-500/80 active:text-white"
               required={true}
               type="submit"
               value="login"
@@ -230,7 +230,7 @@ exports[`Login renders correctly 1`] = `
             <br />
              
             <br />
-            It is deigned to enhance your experience with League of Legends and help you get more into the game regardless of your rank or experience. Stay up to date with game news, explore game champions, items and find the prefect items build for any situation, and more!
+            It is designed to enhance your experience with League of Legends and help you get more into the game regardless of your rank or experience. Stay up to date with game news, explore game champions, items and find the prefect items build for any situation, and more!
           </p>
           <br />
           <br />
@@ -243,7 +243,7 @@ exports[`Login renders correctly 1`] = `
               type="button"
             >
               <a
-                className="text-blue-500 hover:text-red"
+                className="pl-5 text-2xl font-bold text-blue-500 hover:text-red-500"
               >
                  Sign up here!
               </a>

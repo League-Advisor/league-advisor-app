@@ -96,25 +96,6 @@ describe("LoginForm", () => {
 });
 
 
-// describe("Login", () => {
-//   it("should let me login", async () => {
-//     render(<Login />)
-//   userEvent.type(
-//     screen.getByLabelText(/username/i),
-//     'john.maverick',
-//   )
-//   userEvent.type(
-//     screen.getByLabelText(/password/i),
-//     'super-secret',
-//   )
-//   userEvent.click(screen.getByDisplayValue(/login/i))
-
-//   const password = screen.getByLabelText(/password/i)
-//   // Assert meaningful error message shown to the user
-//   expect(password).toBeInTheDocument()
-//   });
-// });
-
 
 
 import renderer from 'react-test-renderer';
