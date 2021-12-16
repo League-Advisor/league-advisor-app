@@ -115,3 +115,14 @@ describe("LoginForm", () => {
 //   });
 // });
 
+
+
+import renderer from 'react-test-renderer';
+
+
+it('Login renders correctly', () => {
+  const login = renderer
+    .create(<Login />)
+    .toJSON();
+  expect(login).toMatchSnapshot();
+});
