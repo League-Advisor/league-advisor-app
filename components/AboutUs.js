@@ -8,7 +8,7 @@ export default function AboutUs() {
             <video playsInline autoPlay loop muted className="flex opacity-50 z-2 h-100" src="/Shurima-Crest.webm" />
 
             <section className="absolute top-0 grid w-10/12 mt-auto ml-auto mr-auto ">
-                <div className="z-0 pb-12 mt-12 text-center">
+                <div data-testid="title" className="z-0 pb-12 mt-12 text-center">
                     <h1 className="font-mono font-bold text-white text-7xl font-heading">
                         Check our awesome team members
                     </h1>
