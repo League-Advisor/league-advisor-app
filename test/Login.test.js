@@ -1,6 +1,9 @@
 import { render, fireEvent, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import * as React from 'react'
+import { useAuth } from '../contexts/auth'
+import userEvent from '@testing-library/user-event'
+
 
 
 const Providers = ({ children }) => {
@@ -93,21 +96,22 @@ describe("LoginForm", () => {
 });
 
 
-// describe("Login",  () => {
+// describe("Login", () => {
 //   it("should let me login", async () => {
-//     const onSubmitSpy = jest.fn();
-//     render(<Login><form onSubmit={onSubmitSpy}></form> </Login> );
+//     render(<Login />)
+//   userEvent.type(
+//     screen.getByLabelText(/username/i),
+//     'john.maverick',
+//   )
+//   userEvent.type(
+//     screen.getByLabelText(/password/i),
+//     'super-secret',
+//   )
+//   userEvent.click(screen.getByDisplayValue(/login/i))
 
-//     fireEvent.change(screen.getByLabelText(/username/i), {
-//       target: { value: 'username' },
-//     })
-//     fireEvent.change(screen.getByLabelText(/password/i), {
-//       target: { value: 'password' },
-//     })
-
-//     fireEvent.click(screen.getByDisplayValue(/login/i))
-
-
-//     expect().toThrowError
+//   const password = screen.getByLabelText(/password/i)
+//   // Assert meaningful error message shown to the user
+//   expect(password).toBeInTheDocument()
 //   });
 // });
+

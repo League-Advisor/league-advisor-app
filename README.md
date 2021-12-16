@@ -147,6 +147,8 @@ v0.5.7 _test_: added front login component tests_ 16 Dec 2021
 
 v0.5.8 _feat: added more tests and handled sessions ft.Bashar_ 16 Dec 2021
 
+v0.5.9 _test: added more tests_ 16 Dec 2021
+
 ---
 
 ## Test Coverage

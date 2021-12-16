@@ -1,18 +1,15 @@
 import React from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { useAuth } from '../contexts/auth'
-import Link from 'next/link'
 
 export default function Navbar() {
-    const { user, login, logout } = useAuth()
+
 
     const router = useRouter()
 
     function Logout() {
         localStorage.clear()
         location.reload();
-        // router.push("/")
     }
     
     return (
@@ -71,9 +68,7 @@ export default function Navbar() {
                                 <button onClick={() => { Logout() }}>
                                     Logout
                                 </button>
-                                {/* <button type="button" onClick={logout, router.push('/')}>
 
-                                </button> */}
                             </li>
                         </ul>
                     </div>
