@@ -59,6 +59,16 @@
 
 [GitHub Projects - League Advisor Web App](https://github.com/orgs/League-Advisor/projects/2)
 
+
+
+- yarn
+- next 
+- react
+- javascript
+- tailwind
+
+- axios
+
 ---
 
 ## Getting Started
@@ -71,9 +81,86 @@
 
 v0.1: _feat: started project and created project repo_ - 08 Dec 2021
 
-v0.1.1 _docs: added requirements, domain model and db schema_ - 09 Dec 2021
+v0.1.1 _docs: added requirements, domain model and db schema_ - 08 Dec 2021
+
+v0.1.2 _docs: edited domain model and db schema_ - 09 Dec 2021
+
+v0.2.1 _feat: created login component and added icons assets_ - 12 Dec 2021
+
+v0.2.2 _fix: added to login component_ - 12 Dec 2021
+
+v0.2.4 _feat:added webm background to login page and included assets_ - 13 Dec 2021
+
+v0.2.3: _feat: added sign up componenet_ - 12 Dec 2021
+
+v0.2.4 _feat:added image bg to login page_ - 13 Dec 2021
+
+v0.2.3 _feat:added image bg to login page_ - 13 Dec 2021
+
+v0.2.5 _feat:added webm background to login page and included assets_ - 13 Dec 2021
+
+v0.2.6 _feat:added solo and ranked component_ - 13 Dec 2021
+
+v0.2.7 _feat: fix solo build component_ - 14 Dec 2021
+
+v0.2.3: _feat: added sign up componenet_ - 12 Dec 2021
+
+v0.2.4 _feat:added webm background to login page and included assets_ - 13 Dec 2021
+
+v0.2.5 _feat:created profile skeleton_ - 13 Dec 2021
+
+v0.2.6 _feat:added image bg to login page_ - 13 Dec 2021
+
+v0.2.7 _feat:added solo and ranked component_ - 13 Dec 2021
+
+v0.2.8 _refactore:added solo and ranked component_ - 14 Dec 2021
+
+v0.3.0 _feat:update dashboard page and connect it with other pages , did some css_ - 13 Dec 2021
+
+v0.4.0 _feat: compleated championbrowse and itembrowse componnent_ 12 Dec 2021
+
+v0.4.1 _feat:added css to profile component_ - 14 Dec 2021
+
+v0.4.2 _feat:handeled Signup component functionality_ - 14 Dec 2021
+
+v0.4.3 _feat:edit css for apps_ - 14 Dec 2021
+
+v0.4.4 _feat:edit css for dashboard ,champions and items_ - 14 Dec 2021
+
+v0.4.5 _feat:patch notes component_ - 14 Dec 2021
+
+v0.4.6 _feat: handled SoloItem component render_ 14 Dec 2021
+
+v0.5.0 _feat: handled sessions_ 14 Dec 2021
+
+v0.7.1 _test: adding tests for components_ 16 Dec 2021
+
+v0.5.3 _refactor: modified apps routing_ 15 Dec 2021
+
+v0.5.4 _refactor: Adjusted styles for profile, solo, and dashbaord_ 15 Dec 2021
+
+v0.5.5 _refactor: modified about us style_ 15 Dec 2021
+
+v0.5.6 _feat: added patch notes component style_ 15 Dec 2021
+
+v0.5.7 _test_: added front login component tests_ 16 Dec 2021
+
+v0.5.8 _feat: added more tests and handled sessions ft.Bashar_ 16 Dec 2021
+
+v0.5.9 _test: added more tests_ 16 Dec 2021
+
+v0.6.0 _test: added snapshots tests_ 16 Dec 2021
+
+v0.6.1 _test: added front dashboard and navbar components tests_ 16 Dec 2021
+
+v0.6.2 _test: added end to end (champions, itms)Browse components tests_ 16 Dec 2021
+
+v0.6.3 _test: added front aboutus component tests_ 16 Dec 2021
+
+v0.6.4 _test: added front dashboard and navbar components tests_ 16 Dec 2021
 
 ---
+
 
 ## Test Coverage
 
