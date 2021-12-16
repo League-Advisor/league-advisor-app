@@ -1,19 +1,31 @@
 import React from "react";
-import { render, screen } from "../test-utils";
 import "@testing-library/jest-dom";
 import Signup from '../../components/Signup'
 import PatchNotes from '../../components/PatchNotes'
-import SoloChampion from '../../components/SoloItem'
-import Items from '../../components/ItemBrowse'
+import SoloChampion from '../../components/SoloChampion'
+import Items from '../../components/ItemBrowser'
 import Login from '../../components/Login'
 import Dashboard from '../../components/Dashboard'
 import Navbar from '../../components/Navbar'
 import LoginForm from '../../components/Login'
-import profile from '../../components/Profile'
-import Ranked from '../../components/RankedItems'
-import Champion from '../../components/championsbrowse'
+import Profile from '../../components/Profile'
+import ChampionsBrowser from '../../components/ChampionsBrowser'
 import { AuthProvider } from '../../contexts/auth'
-import Home from '../../pages/index'
+import { render } from '@testing-library/react'
+import '@testing-library/jest-dom'
+
+const Providers = ({ children }) => {
+    return children;
+};
+
+// re-export everything
+export * from "@testing-library/react";
+const customRender = (ui, options = {}) =>
+    render(ui, { wrapper: Providers, ...options });
+// override render method
+export { customRender as render };
+
+
 describe("patch notes page", () => {
     it("should render", () => {
         render(<PatchNotes />);
@@ -33,7 +45,7 @@ describe("soloChampion page", () => {
 
 describe("profile page", () => {
     it("should render", () => {
-        render(<AuthProvider><profile /></AuthProvider>);
+        render(<AuthProvider><Profile /></AuthProvider>);
     });
 });
 
@@ -69,17 +81,6 @@ describe("soloChampion page", () => {
 
 describe("cahmpion page", () => {
     it("should render", () => {
-        render(<Champion />);
-    });
-});
-
-describe("ranked page", () => {
-    it("should render", () => {
-        render(<Ranked />);
-    });
-});
-describe("home page", () => {
-    it("home render", () => {
-        render(<AuthProvider><Home /></AuthProvider>);
+        render(<ChampionsBrowser />);
     });
 });

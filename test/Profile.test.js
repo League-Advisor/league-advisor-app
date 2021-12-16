@@ -52,18 +52,6 @@ describe("ProfileRendering", () => {
 });
 
 
-// describe("ProfileRendering", () => {
-//     it("should show user data", () => {
-
-//         render(<AuthProvider><Profile user={true} /></AuthProvider>);
-
-//         fireEvent.click(screen.getByText(/UPDATE/i))
-
-//         expect('a').toBeInTheDocument()
-
-//     });
-// });
-
 
 import renderer from 'react-test-renderer';
 

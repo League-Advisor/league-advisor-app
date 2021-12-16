@@ -20,6 +20,7 @@ export default function signup({user}) {
       "summoner_server": event.target.summoner_server.value,
     }
 
+    
     const response = await axios.post(registrationUrl, registrationRequest)
 
 
@@ -32,6 +33,7 @@ export default function signup({user}) {
 
   return (
     <div>
+      
       <div className="flex items-center justify-center w-full min-h-full px-4 py-12 sm:px-6 lg:px-8">
         <div className="w-full max-w-md space-y-8">
           <div>
@@ -134,6 +136,7 @@ export default function signup({user}) {
                   name="password1"
                   type="password"
                   autoComplete="current-password"
+                  minlength="8"
                   required
                   className="relative block w-full px-3 py-3 mt-5 text-lg text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10"
                   placeholder="Password"
@@ -149,6 +152,7 @@ export default function signup({user}) {
                   name="password2"
                   type="password"
                   autoComplete="current-password"
+                  minlength="8"
                   required
                   className="relative block w-full px-3 py-3 mt-5 text-lg text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10"
                   placeholder="Confirm Password"
