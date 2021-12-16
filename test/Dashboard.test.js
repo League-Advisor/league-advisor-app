@@ -33,13 +33,5 @@ describe("Dashboard", () => {
 });
 
 
-describe("Click", () => {
-    it("render button", () => {
-        render(<AuthProvider ><Dashboard /></AuthProvider>);
-        const { container } = render(<Dashboard />);
 
-        const button = getByTestId(container, 'btn');
-        fireEvent.click(button);
-    });
-});
 

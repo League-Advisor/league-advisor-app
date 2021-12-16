@@ -4,8 +4,9 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-
+		"export": "next export"
 		"test": "jest --config ./config/jest.config.js"
+
 	},
 
 	"dependencies": {
