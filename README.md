@@ -155,8 +155,6 @@ v0.6.4 _test: added front dashboard and navbar components tests_ 16 Dec 2021
 
 v0.6.5 _docs: added higher quality assets and modified docs_ 16 Dec 2021
 
-v0.6.6 fix: styles and details_ 16 Dec 2021
-
 ---
 
 ## Test Coverage
