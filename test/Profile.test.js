@@ -63,3 +63,14 @@ describe("ProfileRendering", () => {
 
 //     });
 // });
+
+
+import renderer from 'react-test-renderer';
+
+
+it('Login renders correctly', () => {
+  const profile = renderer
+    .create(<AuthProvider><Profile /></AuthProvider>)
+    .toJSON();
+  expect(profile).toMatchSnapshot();
+});
