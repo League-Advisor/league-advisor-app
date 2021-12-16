@@ -8,13 +8,7 @@
 
 ## Web App
 
-### *TBA*
-
----
-
-## Features and Tests
-
-### *TBA*
+[League Advisor Web App!](https://league-advisor-app-tau.vercel.app/)
 
 ---
 
@@ -159,8 +153,9 @@ v0.6.3 _test: added front aboutus component tests_ 16 Dec 2021
 
 v0.6.4 _test: added front dashboard and navbar components tests_ 16 Dec 2021
 
----
+v0.6.5 _docs: added higher quality assets and modified docs_ 16 Dec 2021
 
+---
 
 ## Test Coverage
 
