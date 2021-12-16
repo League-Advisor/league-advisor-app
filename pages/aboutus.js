@@ -11,8 +11,8 @@ export default function aboutus() {
     return (
         <div className="flex">
             <Head>
-                <title>League Advisor</title>
-                <link rel="icon" href="/favicon.png" />
+            <title>League Advisor</title>
+        <link rel="icon" href="/favicon.png" />
             </Head>
 
 
@@ -20,8 +20,8 @@ export default function aboutus() {
 
             {user ?
                 <>
-                    <Navbar />
-                    <AboutUs />
+                    <Navbar user = {user}/>
+                    <AboutUs user = {user}/>
                 </>
                 : <Login login={login} />
             }

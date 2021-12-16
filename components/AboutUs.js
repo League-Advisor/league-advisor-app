@@ -2,7 +2,7 @@ import React from 'react'
 import { Icon } from '@iconify/react'
 
 // className="w-8/12 h-screen px-4 py-12 mx-auto sm:px-6 lg:px-4"
-export default function AboutUs() {
+export default function AboutUs({user}) {
     return (
         <div className="flex h-screen bg-black/90">
             <video playsInline autoPlay loop muted className="flex opacity-50 z-2 h-100" src="/Shurima-Crest.webm" />

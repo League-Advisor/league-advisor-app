@@ -11,14 +11,14 @@ export default function signup() {
     return (
         <div className="flex">
             <Head>
-                <title>League Advisor</title>
-                <link rel="icon" href="/favicon.png" />
+            <title>League Advisor</title>
+        <link rel="icon" href="/favicon.png" />
             </Head>
 
             {user ?
                 <>
-            <Navbar />
-            <ChampionsBrowser />
+            <Navbar user = {user}/>
+            <ChampionsBrowser user = {user}/>
                 </>
                 : <Login login={login} />
             }

@@ -4,9 +4,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useAuth } from "../contexts/auth"
 
-export default function Profile() {
+export default function Profile({user}) {
 
-    const { user } = useAuth();
     const [userProfile, setUserProfile] = useState(user)
     const updateProfileUrl = process.env.NEXT_PUBLIC_PROFILE_UPDATE_URL;
 

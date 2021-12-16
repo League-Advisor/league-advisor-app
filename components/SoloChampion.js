@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const soloItemUrl = process.env.NEXT_PUBLIC_SOLO_ITEM_URL;
 
-export default function SoloChampion() {
+export default function SoloChampion({user}) {
   const [build, setBuild] = useState(null)
   const [champion, setChampion] = useState(null)
 

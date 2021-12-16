@@ -17,8 +17,8 @@ export default function profile() {
             </Head>
             {user?
             <>
-            <Navbar />
-            <Profile />
+            <Navbar user = {user}/>
+            <Profile user = {user}/>
             </>
             :<Login login = {login}/>
             }
