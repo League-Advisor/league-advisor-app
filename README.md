@@ -133,7 +133,7 @@ v0.4.6 _feat: handled SoloItem component render_ 14 Dec 2021
 
 v0.5.0 _feat: handled sessions_ 14 Dec 2021
 
-v0.5.1 _fix: modified items and champion browser components_ 15 Dec 2021
+v0.7.1 _test: adding tests for components_ 16 Dec 2021
 
 v0.5.3 _refactor: modified apps routing_ 15 Dec 2021
 
