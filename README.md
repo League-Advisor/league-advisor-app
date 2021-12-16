@@ -131,12 +131,29 @@ v0.4.5 _feat:patch notes component_ - 14 Dec 2021
 
 v0.4.6 _feat: handled SoloItem component render_ 14 Dec 2021
 
-
 v0.5.0 _feat: handled sessions_ 14 Dec 2021
 
 v0.7.1 _test: adding tests for components_ 16 Dec 2021
 
----
+v0.5.3 _refactor: modified apps routing_ 15 Dec 2021
+
+v0.5.4 _refactor: Adjusted styles for profile, solo, and dashbaord_ 15 Dec 2021
+
+v0.5.5 _refactor: modified about us style_ 15 Dec 2021
+
+v0.5.6 _feat: added patch notes component style_ 15 Dec 2021
+
+v0.5.7 _test_: added front login component tests_ 16 Dec 2021
+
+v0.5.8 _feat: added more tests and handled sessions ft.Bashar_ 16 Dec 2021
+
+v0.5.9 _test: added more tests_ 16 Dec 2021
+
+v0.6.0 _test: added snapshots tests_ 16 Dec 2021
+
+v0.6.1 _test: added front aboutus component tests_ 16 Dec 2021
+
+v0.6.2 _test: added front dashboard and navbar components tests_ 16 Dec 2021---
 
 ## Test Coverage
 

@@ -1,9 +1,11 @@
-import Link from "next/link";
+import { useRouter } from 'next/router'
+import Image from 'next/image';
 
 export default function LoginForm({ login }) {
+    const router = useRouter()
     return (
 
-        <div className="absolute flex w-full min-h-screen bg-gray-300">
+        <div className="absolute flex w-full min-h-screen text-center bg-gray-300">
             <div className="flex w-full rounded z-1 color-gray-200" style={{ width: "100%" }}>
 
                 <video playsInline autoPlay loop muted className="absolute w-full z-1" layout="fill" objectFit="cover" src="/Galio.webm" />
@@ -16,7 +18,7 @@ export default function LoginForm({ login }) {
                         <div className="px-5 py-5" >
 
                             <div className="items-start py-5 ">
-                                <label className="z-0 block w-1/3 my-2 mt-5 text-xl font-bold tracking-wide text-white " for="userName">
+                                <label className="z-0 block w-1/3 my-2 mt-5 text-xl font-bold tracking-wide text-white " htmlFor="userName">
                                     username
                                 </label>
                             </div>
@@ -25,7 +27,7 @@ export default function LoginForm({ login }) {
                             </div>
 
                             <div className="items-start py-5 pl-5">
-                                <label className="z-0 block w-1/3 my-2 mt-5 text-xl font-bold tracking-wide text-white " for="password">
+                                <label className="z-0 block w-1/3 my-2 mt-5 text-xl font-bold tracking-wide text-white " htmlFor="password">
                                     password
                                 </label>
                             </div>
@@ -41,13 +43,20 @@ export default function LoginForm({ login }) {
                 </div>
                 <div className="z-0 flex justify-center w-2/3 py-20 ">
                     <div className="z-0 w-5/6 px-5 py-20 bg-gray-100/90 rounded-xl">
+                    <Image
+                                    src='/logo.png'
+                                    width={300}
+                                    height={300 }
+                                />
                         <div className="z-0 justify-start p-5 ">
-                            <h2 className="z-0 py-5 text-3xl font-bold ">
+                            
+                            <h2 className="z-0 py-5 text-4xl font-bold ">
                                 Welcome to League Advisor
                             </h2>
                             <br />
 
                             <p className="text-xl font-bold">
+                           
                                 League Advisor is your perfect League of Legends companion!
                                 <br /> <br />
                                 It is deigned to enhance your experience with League of Legends and help you get more into the game regardless of your rank or experience.
@@ -55,9 +64,13 @@ export default function LoginForm({ login }) {
                             </p>
                             <br /><br />
                             <h4 className="text-xl font-bold">Not a member already?
-                                <Link href="#">
+
+
+                                <button type="button" onClick={() => router.push('/signup')}>
                                     <a className="text-blue-500 hover:text-red" > Sign up here!</a>
-                                </Link>
+                                </button>
+
+
                             </h4>
 
                         </div>

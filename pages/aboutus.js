@@ -1,11 +1,11 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import AboutUs from '../components/AboutUs'
 import Head from 'next/head'
-import PatchNotes from '../components/PatchNotes'
+import Navbar from '../components/Navbar'
 import { useAuth } from '../contexts/auth'
 import Login from '../components/Login'
 
-export default function patchNotes() {
+export default function aboutus() {
     const { user, login } = useAuth()
 
     return (
@@ -16,13 +16,16 @@ export default function patchNotes() {
             </Head>
 
 
+
+
             {user ?
                 <>
                     <Navbar />
-                    <PatchNotes />
+                    <AboutUs />
                 </>
                 : <Login login={login} />
             }
         </div>
     )
 }
+

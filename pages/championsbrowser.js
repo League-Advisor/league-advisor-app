@@ -1,11 +1,11 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 import Head from 'next/head'
-import PatchNotes from '../components/PatchNotes'
+import ChampionsBrowser from '../components/ChampionsBrowser'
+import Navbar from '../components/Navbar'
 import { useAuth } from '../contexts/auth'
 import Login from '../components/Login'
 
-export default function patchNotes() {
+export default function signup() {
     const { user, login } = useAuth()
 
     return (
@@ -15,14 +15,20 @@ export default function patchNotes() {
                 <link rel="icon" href="/favicon.png" />
             </Head>
 
-
             {user ?
                 <>
-                    <Navbar />
-                    <PatchNotes />
+            <Navbar />
+            <ChampionsBrowser />
                 </>
                 : <Login login={login} />
             }
+
         </div>
     )
 }
+
+
+
+
+
+       

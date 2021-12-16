@@ -41,7 +41,7 @@ export function AuthProvider(props) {
                 summoner_champion_mastery: decodedAccess.summoner_champion_mastery,
                 summoner_match_history: decodedAccess.summoner_match_history,
             },
-
+      
         }
 
         localStorage.setItem("token", JSON.stringify(newState))
@@ -51,7 +51,7 @@ export function AuthProvider(props) {
     useEffect(() => {
         const data = localStorage.getItem("token")
         if (data) {
-            setState(JSON.parse(data))
+            setState(JSON.parse(data))           
         }
     }, {})
 

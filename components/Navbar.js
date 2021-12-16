@@ -1,12 +1,18 @@
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
-
+import { useRouter } from 'next/router'
 
 export default function Navbar() {
 
-    return (
 
+    const router = useRouter()
+
+    function Logout() {
+        localStorage.clear()
+        location.reload();
+    }
+    
+    return (
         <>
             <nav className="sticky top-0 z-0 flex-col justify-between w-2/12 h-screen rounded-md ">
                 <div className="w-full h-full bg-black ">
@@ -16,51 +22,54 @@ export default function Navbar() {
                     </div>
                     <div className="pl-10">
                         <ul className="pt-8 space-y-12">
-                            {/* Profile */}
-                            <li className="flex items-center space-x-4 text-2xl font-bold text-white cursor-pointer hover:text-blue-600">
+
+                            <li className="flex items-center space-x-4 text-3xl text-white cursor-pointer hover:text-blue-600">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
                                 </svg>
-                                <Link href="/profile" >Profile</Link>
+
+
+                                <button className="font-bold" type="button" onClick={() => router.push('/profile')}>
+                                    Profile
+                                </button>
                             </li>
-                            {/* Dashboard */}
-                            <li className="flex items-center space-x-4 text-2xl font-bold text-white cursor-pointer hover:text-blue-600">
+
+                            <li data-testid="list" className="flex items-center space-x-4 text-3xl text-white cursor-pointer hover:text-blue-600">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 " fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
                                 </svg>
 
-                                <Link href="/">Dashboard</Link>
+                                <button className="font-bold" type="button" onClick={() => router.push('/')}>
+                                    Dashboard
+                                </button>
+                            </li>
 
-                            </li>
-                            {/* Patch Notes */}
-                            <li className="flex items-center space-x-4 text-2xl font-bold text-white cursor-pointer hover:text-blue-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
-                                <Link href="/patchNotes">Patch Notes</Link>
-                            </li>
-                            {/* About Us */}
-                            <li className="flex items-center space-x-4 text-2xl font-bold text-white cursor-pointer hover:text-blue-600">
+                            <li className="flex items-center space-x-4 text-3xl text-white cursor-pointer hover:text-blue-600">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
                                 </svg>
-                                <Link href="/aboutUs">About Us</Link>
+
+                                <button className="font-bold" type="button" onClick={() => router.push('/aboutus')}>
+                                    About Us
+                                </button>
                             </li>
-                            {/* Logout */}
-                            <li className="flex items-center space-x-4 text-2xl font-bold text-white cursor-pointer hover:text-blue-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+
+                            <li className="flex items-center space-x-4 text-3xl text-white cursor-pointer hover:text-blue-600">
+                                <svg data-testid="icon" xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 font-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                                 </svg>
-                                <Link href="/login">Logout</Link>
+
+                                <button onClick={() => { Logout() }}>
+                                    Logout
+                                </button>
+
                             </li>
                         </ul>
                     </div>

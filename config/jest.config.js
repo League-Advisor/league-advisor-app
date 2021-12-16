@@ -1,7 +1,11 @@
+
 // import "@testing-library/jest-dom";
 
 module.exports = {
     testEnvironment: "jsdom",
+
+module.exports = {
+
     rootDir: '../',
     setupFilesAfterEnv: ["./config/jest.setup.js"],
     transform: {
@@ -12,5 +16,7 @@ module.exports = {
     },
     verbose: true,
     collectCoverage: true,
+
     coveragePathIgnorePatterns: [ "<rootDir>/test/test-utils.js" ]
+
 };

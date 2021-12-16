@@ -1,28 +1,35 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 import Head from 'next/head'
-import PatchNotes from '../components/PatchNotes'
+import ItemsBrowser from '../components/ItemBrowser'
+import Navbar from '../components/Navbar'
 import { useAuth } from '../contexts/auth'
 import Login from '../components/Login'
 
-export default function patchNotes() {
+export default function itemsbrowser() {
     const { user, login } = useAuth()
 
     return (
+
         <div className="flex">
             <Head>
                 <title>League Advisor</title>
                 <link rel="icon" href="/favicon.png" />
             </Head>
 
-
             {user ?
                 <>
                     <Navbar />
-                    <PatchNotes />
+                    <ItemsBrowser />
                 </>
                 : <Login login={login} />
             }
         </div>
+
     )
+
+
+
+
+
+
 }

@@ -6,7 +6,7 @@ import championKeys from "../public/static/championKeys";
 
 const championUrl = process.env.NEXT_PUBLIC_CHAMPIONS_BROWSER_URL
 
-export default function Champion() {
+export default function ChampionsBrowser() {
     const [item, setitem] = useState("")
     const [showModal, setShowModal] = useState(false);
     const [championData, setchampionData] = useState(null);
@@ -15,9 +15,9 @@ export default function Champion() {
         let response = await axios.get(`${championUrl}${value}`)
 
         let resData = {
-            "key":response.data.key,
+            "key": response.data.key,
             "name": response.data.name,
-            "champion_id":response.data.champion_id,
+            "champion_id": response.data.champion_id,
             "title": response.data.title,
             "lore": response.data.lore,
             "attack": response.data.attack,
@@ -33,9 +33,8 @@ export default function Champion() {
     }
 
     const content_bg = {
-        // "background-image": "url('https://i.pinimg.com/originals/69/58/10/6958108311fb163d1f0b4f575dab67e4.gif')",
         "background-size": "cover",
-        // "border-radius": "10px"
+
     }
 
 
@@ -61,13 +60,13 @@ export default function Champion() {
 
                     {showModal && championData ? (<>
                         <div className="fixed inset-0 z-50 items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none" >
-                            <div className="relative w-auto max-w-2xl mx-auto mb-12 mt-72">
+                            <div className="relative w-auto max-w-2xl mx-auto mt-40 mb-12 left-40">
                                 {/*content*/}
-                                <div className="relative flex flex-col w-full bg-white border-0 rounded-lg shadow-2xl outline-none focus:outline-none">
+                                <div className="relative flex flex-col w-full border-0 rounded-lg shadow-2xl outline-none bg-white/90 focus:outline-none">
                                     {/*header*/}
-                                    <p className="mt-2 ml-4 font-semibold">{championData["title"]}</p>
-                                    <div className="flex items-start justify-center p-5 border-b border-solid rounded-t border-blueGray-200">
-                                        <h3 className="text-3xl font-semibold">
+                                    <p className="mt-2 ml-4 text-lg font-bold">{championData["title"]}</p>
+                                    <div className="flex items-start justify-center p-5 border-b border-solid rounded-t border-blueGray-200 ">
+                                        <h3 className="text-4xl font-bold ">
                                             {item}
                                         </h3>
                                         <button
@@ -90,14 +89,14 @@ export default function Champion() {
                                         </div>
                                     }
                                     <div className="relative flex-auto p-6 text-justify">
-                                        <p className="my-4 text-lg leading-relaxed text-blueGray-500">
+                                        <p className="my-4 text-xl font-semibold leading-relaxed text-blueGray-500">
                                             {championData["lore"]}
                                         </p>
                                     </div>
                                     <div className="flex items-center justify-center w-8/12 mx-auto border-t border-solid rounded-b border-blueGray-200">
                                         {/* champion props */}
                                         <p className="items-center justify-center block mx-8 font-semibold">
-                                            Magic<br/>
+                                            Magic<br />
                                             <Image
                                                 src='/static/images/StatMods/StatModsAdaptiveForceIcon.png'
                                                 alt='Magic'
@@ -106,46 +105,44 @@ export default function Champion() {
                                             /><br />
                                             {championData["magic"]}/10 </p>
                                         <p className="items-center justify-center block mx-8 font-semibold">
-                                            Defense<br/>
+                                            Defense<br />
                                             <Image
                                                 src='/static/images/StatMods/StatModsArmorIcon.png'
                                                 alt='Defense'
                                                 width={32}
                                                 height={32}
-                                            /><br/>
+                                            /><br />
                                             {championData["defense"]}/10</p>
                                         <p className="items-center justify-center block mx-8 font-semibold">
-                                            Attack<br/>
+                                            Attack<br />
                                             <Image
                                                 src='/static/images/StatMods/StatModsAttackSpeedIcon.png'
                                                 alt='Attack'
                                                 width={32}
                                                 height={32}
-                                            /><br/>
+                                            /><br />
                                             {championData["attack"]}/10</p>
                                         <p className="items-center justify-center block mx-8 font-semibold">
-                                            Difficulty<br/>
+                                            Difficulty<br />
                                             <Image
                                                 src='/static/images/StatMods/StatModsHealthScalingIcon.png'
                                                 alt='Difficulty'
                                                 width={32}
                                                 height={32}
-                                            /><br/>
+                                            /><br />
                                             {championData["difficulty"]}/10</p>
                                     </div>
                                     <div className="flex items-center justify-center p-6 border-t border-solid rounded-b border-blueGray-200">
                                         {/* champion tags */}
-                                        <h2 className="font-bold">Tags: </h2>
-                                        <br />
-                                        <p> {championData["tags"].replace(/[\[\]']+/g, ' ')}</p>
+                                        <h2 className="text-lg font-bold">Tags: </h2>
+                                        <p className="text-lg font-semibold"> {championData["tags"].replace(/[\[\]']+/g, ' ')}</p>
                                     </div>
                                     {/*footer*/}
                                     <div className="flex items-center justify-end p-6 border-t border-solid rounded-b border-blueGray-200">
                                         <button
                                             className="px-6 py-2 mb-1 mr-1 text-sm font-bold text-red-500 uppercase transition-all duration-150 ease-linear outline-none background-transparent focus:outline-none"
                                             type="button"
-                                            onClick={() => setShowModal(false)}
-                                        >
+                                            onClick={() => setShowModal(false)}>
                                             Close
                                         </button>
 
