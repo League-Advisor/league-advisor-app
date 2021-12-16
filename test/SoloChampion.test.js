@@ -69,3 +69,13 @@ describe("SoloChampion", () => {
   
 //     });
 //   });
+
+import renderer from 'react-test-renderer';
+
+
+it('Login renders correctly', () => {
+  const soloChampion = renderer
+    .create(<SoloChampion />)
+    .toJSON();
+  expect(soloChampion).toMatchSnapshot();
+});

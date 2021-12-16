@@ -8,8 +8,11 @@ export default function Home() {
   const { user, login } = useAuth();
 
   return (
+
+
     <div className="flex flex-col items-center justify-center min-h-screen ">
       <Head>
+
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
@@ -17,7 +20,7 @@ export default function Home() {
       {/* <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center"> */}
         {user ? <Dashboard /> : <LoginForm login={login} />}
 
-      {/* </main> */}
+
     </div>
   )
 }
