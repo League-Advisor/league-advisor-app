@@ -1,6 +1,6 @@
 import Image from "next/image";
 import championKeys from "../public/static/championKeys";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { useAuth } from "../contexts/auth"
 
@@ -10,6 +10,17 @@ export default function Profile() {
     const [userProfile, setUserProfile] = useState(user)
     const updateProfileUrl = process.env.NEXT_PUBLIC_PROFILE_UPDATE_URL;
 
+
+    useEffect(() => {
+        const data = localStorage.getItem("token")
+        if (data) {
+            setUserProfile(JSON.parse(data)["user"])
+        }
+    }, [])
+    
+    console.log("00",userProfile);
+
+    
     async function updateProfile(event) {
         event.preventDefault();
         const response = await axios.get(`${updateProfileUrl}?user=${user.username}`,)
@@ -87,7 +98,7 @@ export default function Profile() {
                                         <div className="py-10">
 
                                             <div className="flex">
-                                                {userProfile.summoner_champion_mastery.map(champion =>
+                                                {userProfile["summoner_champion_mastery"].map(champion =>
                                                     <div className="w-1/3 px-20">
                                                         <div className="rounded-full">
                                                             <Image
@@ -117,7 +128,7 @@ export default function Profile() {
                                         </div>
 
 
-                                        <button className="px-10 py-4 my-5 text-xl font-semibold text-white border-2 rounded-3xl hover:text-pink-700 hover:bg-white/50 hover:border-white/50 active:bg-white active:text-pink-900" onClick={() => { updateProfile(event) }}>UPDATE</button>
+                                        <button className="px-10 py-4 my-5 text-xl font-semibold text-white border-2 rounded-3xl hover:text-pink-700 hover:bg-white/50 hover:border-white/50 active:bg-white active:text-pink-900" onClick={(event) => { updateProfile(event) }}>UPDATE</button>
                                         <div className="p-2 mt-5 bg-gray-800 rounded-lg tems-center">
                                             <h4 className="text-2xl font-bold">Match History</h4>
                                             <div className="overflow-hidden ">
@@ -273,7 +284,13 @@ export default function Profile() {
                                         </div>
 
                                     </div>
-                                </div>:<></>}
+                                </div> : <></>}
+                            {/* {userProfile["email"]}
+                            <br/>
+                            {userProfile["username"]}
+                            {userProfile.summoner_match_history[0]}
+                            {userProfile["summoner_champion_mastery"][0]} */}
+                                
                         </div>
                     </div>
                 </div>
