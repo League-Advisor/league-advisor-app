@@ -4,7 +4,7 @@ import Image from "next/image";
 import axios from "axios";
 import { useAuth } from '../contexts/auth';
 
-export default function signup() {
+export default function Signup() {
 
   const { user, login } = useAuth();
 
