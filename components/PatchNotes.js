@@ -20,11 +20,11 @@ export default function PatchNotes() {
 
 
     return (
-        patch ? 
-        <div className="flex flex-col items-center justify-center pl-5 text-xl text-left text-white align-middle bg-gray-900 ">
-        <div dangerouslySetInnerHTML={{ __html: patch.replace("\n", "") }} /> 
-        </div>
-        :<div className="text-3xl font-bold"> Loading. . .</div>
+        patch ?
+            <div className="flex flex-col items-center justify-center pl-5 text-xl text-left text-white align-middle bg-gray-900 ">
+                <div dangerouslySetInnerHTML={{ __html: patch.replace("\n", "") }} />
+            </div>
+            : <div data-testid="load" className="text-3xl font-bold"> Loading. . .</div>
     )
 
 

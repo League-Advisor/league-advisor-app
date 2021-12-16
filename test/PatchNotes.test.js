@@ -1,7 +1,7 @@
 import { render, getByTestId, fireEvent, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import * as React from 'react'
-import AboutUs from '../components/AboutUs'
+import PatchNotes from '../components/PatchNotes'
 
 
 const Providers = ({ children }) => {
@@ -17,20 +17,12 @@ export * from "@testing-library/react";
 // override render method
 export { customRender as render };
 
-describe("AboutUs", () => {
+describe("PatchNotes", () => {
     it("should render the heading", () => {
-        const textToFind = " Check our awesome team members"
 
-        render(<AboutUs />);
+        render(<PatchNotes />);
 
-        expect(getByTestId(document.documentElement, "title"),).toBeInTheDocument();
+        expect(getByTestId(document.documentElement, "load"),).toBeInTheDocument();
     });
 });
-
-
-
-
-
-
-
 
