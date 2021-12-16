@@ -6,7 +6,7 @@ import championKeys from "../public/static/championKeys";
 
 const championUrl = process.env.NEXT_PUBLIC_CHAMPIONS_BROWSER_URL
 
-export default function ChampionsBrowser() {
+export default function ChampionsBrowser({user}) {
     const [item, setitem] = useState("")
     const [showModal, setShowModal] = useState(false);
     const [championData, setchampionData] = useState(null);

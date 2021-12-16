@@ -2,7 +2,7 @@ import axios from "axios";
 
 import { useState } from "react";
 
-export default function PatchNotes() {
+export default function PatchNotes({user}) {
     const [patch, setPatch] = useState(null)
 
     const flag = false

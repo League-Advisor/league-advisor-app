@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 
 
 
-export default function Dashboard() {
+export default function Dashboard({user}) {
     const router = useRouter()
     return (
         <div className='flex h-screen bg-black'>

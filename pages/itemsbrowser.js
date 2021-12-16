@@ -18,8 +18,8 @@ export default function itemsbrowser() {
 
             {user ?
                 <>
-                    <Navbar />
-                    <ItemsBrowser />
+                    <Navbar user = {user}/>
+                    <ItemsBrowser user = {user}/>
                 </>
                 : <Login login={login} />
             }

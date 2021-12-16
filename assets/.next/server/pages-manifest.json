@@ -1,0 +1,14 @@
+{
+  "/_app": "pages/_app.js",
+  "/aboutus": "pages/aboutus.html",
+  "/championsbrowser": "pages/championsbrowser.html",
+  "/": "pages/index.html",
+  "/itemsbrowser": "pages/itemsbrowser.html",
+  "/patchNotes": "pages/patchNotes.html",
+  "/profile": "pages/profile.html",
+  "/signup": "pages/signup.html",
+  "/solochampion": "pages/solochampion.html",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
+}

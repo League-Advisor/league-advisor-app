@@ -18,8 +18,8 @@ export default function patchNotes() {
 
             {user ?
                 <>
-                    <Navbar />
-                    <PatchNotes />
+                    <Navbar user = {user}/>
+                    <PatchNotes user = {user}/>
                 </>
                 : <Login login={login} />
             }

@@ -5,7 +5,7 @@ import axios from "axios";
 import swal from 'sweetalert';
 
 
-export default function signup() {
+export default function signup({user}) {
   const router = useRouter()
 
   const registrationUrl = process.env.NEXT_PUBLIC_REGISTRATION_URL

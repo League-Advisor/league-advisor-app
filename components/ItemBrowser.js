@@ -5,7 +5,7 @@ import axios from 'axios'
 
 
 
-export default function ItemsBrowser() {
+export default function ItemsBrowser({user}) {
     const [showModal, setShowModal] = useState(false);
     const [iteminfo, setiteminfo] = useState(null);
     const itemUrl = process.env.NEXT_PUBLIC_ITEMS_BROWSER_URL
