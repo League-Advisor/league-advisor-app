@@ -23,26 +23,46 @@ export { customRender as render };
 import Login from '../components/Login'
 
 
-describe("Login", () => {
-  it("should let me log in", () => {
+
+
+describe("LoginRendering", () => {
+  it("should render", () => {
     const onSubmitSpy = jest.fn();
     render(<Login onSubmit={onSubmitSpy} />);
 
-    fireEvent.change(screen.getByLabelText(/username/i), {
-      target: { value: 'admin' },
-    })
+    const video = screen.findByTitle(/video/i)
+
+    const div = screen.findByTitle(/div/i)
+
+    const form = screen.findByTitle(/form/i)
+
+    const input = screen.findByTitle(/input/i)
+
+    const image = screen.findByTitle(/Image/i)
+
+    const p = screen.findByTitle(/p/i)
+
+    const h4 = screen.findByTitle(/h4/i)
 
 
-    fireEvent.change(screen.getByLabelText(/password/i), {
-      target: { value: 'admin' },
-    })
+    expect(video).toBeInTheDocument
+    expect(div).toBeInTheDocument
+    expect(form).toBeInTheDocument
+    expect(input).toBeInTheDocument
+    expect(image).toBeInTheDocument
+    expect(p).toBeInTheDocument
+    expect(h4).toBeInTheDocument
 
-    // fireEvent.click(screen.getByDisplayValue(/login/i))
-    const login = screen.getByDisplayValue(/login/i)
-    // const onSubmit = screen.findByText(/onSubmit/i)
-    onSubmitSpy({"password": "admin", "username": "admin"})
-    // we can only use toBeInTheDocument because it was imported
-    // in the jest.setup.js and configured in jest.config.js
+  });
+});
+
+describe("Login", () => {
+  it("should submit on submit", () => {
+    const onSubmitSpy = jest.fn();
+    render(<Login onSubmit={onSubmitSpy} />);
+
+    onSubmitSpy({ "password": "admin", "username": "admin" })
+
     expect(onSubmitSpy).toHaveBeenLastCalledWith({
       password: 'admin',
       username: 'admin',
@@ -52,7 +72,7 @@ describe("Login", () => {
 
 
 describe("LoginForm", () => {
-  it("should let me log in", () => {
+  it("should accept filling the forms", () => {
     const onSubmitSpy = jest.fn();
     render(<Login onSubmit={onSubmitSpy} />);
 
@@ -71,3 +91,23 @@ describe("LoginForm", () => {
 
   });
 });
+
+
+// describe("Login",  () => {
+//   it("should let me login", async () => {
+//     const onSubmitSpy = jest.fn();
+//     render(<Login><form onSubmit={onSubmitSpy}></form> </Login> );
+
+//     fireEvent.change(screen.getByLabelText(/username/i), {
+//       target: { value: 'username' },
+//     })
+//     fireEvent.change(screen.getByLabelText(/password/i), {
+//       target: { value: 'password' },
+//     })
+
+//     fireEvent.click(screen.getByDisplayValue(/login/i))
+
+
+//     expect().toThrowError
+//   });
+// });

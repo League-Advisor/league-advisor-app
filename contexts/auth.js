@@ -3,6 +3,7 @@ import jwt from 'jsonwebtoken';
 import axios from 'axios'
 const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 const tokenUrl = baseUrl + '/api/token/';
+import { useEffect } from "react";
 
 const AuthContext = createContext();
 
@@ -17,8 +18,7 @@ export function AuthProvider(props) {
     const [state, setState] = useState({
         tokens: null,
         user: null,
-        login,
-        logout,
+        login: login,
     });
 
     async function login(username, password) {
@@ -41,18 +41,19 @@ export function AuthProvider(props) {
                 summoner_champion_mastery: decodedAccess.summoner_champion_mastery,
                 summoner_match_history: decodedAccess.summoner_match_history,
             },
+      
         }
 
+        localStorage.setItem("token", JSON.stringify(newState))
         setState(prevState => ({ ...prevState, ...newState }));
     }
 
-    function logout() {
-        const newState = {
-            tokens: null,
-            user: null,
+    useEffect(() => {
+        const data = localStorage.getItem("token")
+        if (data) {
+            setState(JSON.parse(data))           
         }
-        setState(prevState => ({ ...prevState, ...newState }));
-    }
+    }, {})
 
     return (
         <AuthContext.Provider value={state}>
